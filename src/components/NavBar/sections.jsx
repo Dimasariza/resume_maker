@@ -1,6 +1,22 @@
+"use client"
+import { setPictureToggle, switchToggle } from "@/lib/features/switchSection";
+import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
 
 export function NavBarSections() {    
+    const section = useSelector((state) => state.SwitchSection);
+    const dispatch = useDispatch();
+
+    const initiateTemplate = {
+        type: "",
+        placement: "",
+        title: "",
+        description: ""
+    }
+    
+    const [customTemplate, setCustomTemplate] = useState(initiateTemplate)
+
     const toggle = [
         { name : "Picture" },
         { name : "Location" },
@@ -20,13 +36,17 @@ export function NavBarSections() {
     ]
 
     return (
-        <div>
-            <div className="grid grid grid-cols-2 gap-4">
+        <div className="p-2">
+            <div className="grid grid grid-cols-2 gap-2">
                 <span>Personal Details</span>
                 {
                     toggle.map((item, index) => (
                         <label className="fieldset-label" key={index}>
-                            <input type="checkbox" defaultChecked className="toggle" />
+                            <input type="checkbox" 
+                                checked={section[item.name]} 
+                                onChange={()=>dispatch(switchToggle(item.name))} 
+                                className="toggle toggle-xs" 
+                            />
                             { item.name }
                         </label>
                     ))
@@ -37,9 +57,9 @@ export function NavBarSections() {
 
             <span>Add Custom Section</span>
 
-            <div className="flex w-full justify-between">
-                <div className="dropdown dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">Click  ⬇️</div>
+            <div className="flex w-full justify-between items-center gap-2">
+                <div className="dropdown dropdown-center w-full">
+                    <div tabIndex={0} role="button" className="btn btn-sm m-1 w-full">Click  ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li>Select Type</li>
                         {   
@@ -50,8 +70,8 @@ export function NavBarSections() {
                     </ul>
                 </div>
 
-                <div className="dropdown dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">Click  ⬇️</div>
+                <div className="dropdown dropdown-center w-full">
+                    <div tabIndex={0} role="button" className="btn btn-sm m-1 w-full">Click  ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li>Select Placement</li>
                         {   
@@ -62,7 +82,7 @@ export function NavBarSections() {
                     </ul>
                 </div>
 
-                <button className="btn btn-square btn-soft btn-info">
+                <button className="btn btn-square btn-sm btn-outline btn-info">
                     <FiPlus />
                 </button>
             </div>

@@ -12,7 +12,7 @@ export const switchTypography = createSlice({
   initialState,
   reducers: {
     setFont(state, action) {
-      state.color = action.payload;    
+      state.font = action.payload;    
     },
     setSize(state, action) {
       state.size = action.payload;    

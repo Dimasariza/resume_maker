@@ -28,6 +28,8 @@ export function NavBarColor() {
                         <button onClick={()=>handleSwitchColor(item)} key={index} className={`btn btn-circle size-15 bg-${item}`}></button>
                     ))
                 }   
+                <input type="color" className="btn-circle btn size-15" />
+
             </fieldset>
         </div>
     )

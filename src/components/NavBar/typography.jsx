@@ -1,4 +1,10 @@
+import { setFont, setSize } from "@/lib/features/switchTypography";
+import { useDispatch, useSelector } from "react-redux";
+
 export function NavBarTypography() {
+    const { font, size } = useSelector((state) => state.SwitchTypography);
+    const dispatch = useDispatch();
+
     const typography = [
         { name: "Nunito" },
         { name: "Archivo Narrow" },
@@ -18,14 +24,21 @@ export function NavBarTypography() {
         { name: "Big" },
     ]
 
+    const handleClickFont = (font) => {
+        const elem = document.activeElement;
+        if (elem) elem?.blur();
+
+        dispatch(setFont(font))
+    };
+
     return (
-        <div >
-            <div className="dropdown dropdown-center">
-                <div tabIndex={0} role="button" className="btn m-1">Click  ⬇️</div>
+        <div className="flex flex-col gap-2">
+            <div className="dropdown dropdown-center w-full">
+                <div tabIndex={1} role="button" className="btn w-full capitalize">{font}</div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                     {
                         typography.map((item, index) => (
-                            <li key={index}><a>{item.name}</a></li>
+                            <li key={index} onClick={()=>handleClickFont(item.name)} ><a>{item.name}</a></li>
                         ))
                     }
                 </ul>
@@ -34,7 +47,14 @@ export function NavBarTypography() {
             <div className="flex join justify-center">
                 {
                     typographySize.map((item, index) => (
-                        <input onClick={() => handleLayout(item)} key={index} className="join-item btn" type="radio" name="options" aria-label={item.name} />
+                        <input 
+                            onClick={() => dispatch(setSize(item.name))} 
+                            key={index} 
+                            className="join-item btn" 
+                            type="radio" 
+                            name="options" 
+                            aria-label={item.name} 
+                        />
                     ))
                 }
             </div>
