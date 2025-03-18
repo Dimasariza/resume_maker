@@ -9,6 +9,7 @@ export default function AboutMe({viewTitle = true}) {
     const [viewButton, setViewButton] = useState(false);
 
     const { name, role } = useSelector((state) => state.PersonalSummary);
+
     const dispatch = useDispatch();
 
     return (

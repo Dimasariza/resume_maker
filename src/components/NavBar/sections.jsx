@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export function NavBarSections() {    
     const section = useSelector((state) => state.SwitchSection);
+    
     const dispatch = useDispatch();
 
     const initiateTemplate = {

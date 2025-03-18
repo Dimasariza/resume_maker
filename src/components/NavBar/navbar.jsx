@@ -19,6 +19,8 @@ export function NavBar(params) {
         { name: "Sections", icon: '', subMenu: NavBarSections },
     ]
 
+    const languages = ["English", "Espanol", "Francais", "Deutsch", "Italiano", "Nederlands", "Svenska", "Dansk", "Norsk", "Portugis", "Polski"]
+
     return (
         <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 sm:py-0 dark:bg-neutral-900">
             <nav className="w-full mx-auto px-4 md:px-6 lg:px-8 flex justify-between navbar bg-base-100 shadow-sm">
@@ -51,8 +53,8 @@ export function NavBar(params) {
                         <div tabIndex={4}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             { 
-                                ["English", "Espanol", "Francais", "Deutsch", "Italiano", "Nederlands", "Svenska", "Dansk", "Norsk", "Portugis", "Polski"].map((item, index) => (
-                                    <span key={index}>{item}</span>
+                                languages.map((item, index) => (
+                                    <li key={index} ><a>{item}</a></li>
                                 ))
                             }
                         </div>

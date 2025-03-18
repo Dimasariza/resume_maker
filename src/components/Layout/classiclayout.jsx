@@ -7,8 +7,13 @@ import Experience from "../content/experience";
 import Header from "../content/header";
 import PersonalDetails from "../content/personalDetails";
 import Skills from "../content/skills";
+import { useSelector } from "react-redux";
+import Languages from "../content/languages";
+import Hobbies from "../content/hobbies";
 
 export function ClassicLayout() {
+    const section = useSelector((state) => state.SwitchSection);
+
     const reorderComponent = (comp1, comp2, comp3, comp4) => {
         return <>
             <GoDotFill />   
@@ -27,14 +32,16 @@ export function ClassicLayout() {
     return (
         <>
             <div className="grid grid-cols-2">
-                <Header pictureClassName="justify-end order-2" identityClassName="order-1"/>
+                <Header pictureClassName="justify-end order-2" identityClassName="order-1" section={section} />
             </div>
 
-            <AboutMe viewTitle={false} />
+            {section["About Me"] && <AboutMe viewTitle={false} />}
             <PersonalDetails viewTitle={false} detailClassname="gap-5" />
-            <Experience reorderComponent={reorderComponent} fitPosition={true} />
-            <Education reorderComponent={reorderComponent} fitDegree={true}/>
-            <Skills />
+            {section["Work Experience"] && <Experience reorderComponent={reorderComponent} fitPosition={true} />}
+            {section["Education"] && <Education reorderComponent={reorderComponent} fitDegree={true}/>}
+            {section["Skills"] && <Skills />}
+            {section["Languages"] && <Languages />}
+            {section["Hobbies"] && <Hobbies />}
         </>
     )
 }

@@ -6,8 +6,13 @@ import Skills from "../content/skills";
 import PersonalDetails from "../content/personalDetails";
 import Header from "../content/header";
 import { GoDotFill } from "react-icons/go";
+import { useSelector } from "react-redux";
+import Languages from "../content/languages";
+import Hobbies from "../content/hobbies";
 
 function SplitLayout(props) {
+    const section = useSelector((state) => state.SwitchSection);
+
     const reorderComponent = (comp1, comp2, comp3, comp4) => (
         <>
             <GoDotFill />   
@@ -24,17 +29,19 @@ function SplitLayout(props) {
 
     return (
         <div className="grid grid-cols-2">
-            <Header pictureClassName="justify-start" />
+            <Header pictureClassName="justify-start" section={section} />
 
-            <div className="">
-                <AboutMe />
+            <div>
+                {section["About Me"] && <AboutMe />}
                 <PersonalDetails detailClassname="flex-col justify-center gap-2"/>
             </div>
 
             <div>
-                <Experience reorderComponent={reorderComponent} />
-                <Education reorderComponent={reorderComponent} />
-                <Skills />
+                {section["Work Experience"] && <Experience reorderComponent={reorderComponent} />}
+                {section["Education"] && <Education reorderComponent={reorderComponent} />}
+                {section["Skills"] && <Skills />}
+                {section["Languages"] && <Languages />}
+                {section["Hobbies"] && <Hobbies />}
             </div>
         </div>
     )

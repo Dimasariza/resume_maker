@@ -11,6 +11,8 @@ import Experience from './features/experience'
 import Educations from './features/education'
 import Skills from './features/skills'
 import SwitchSection from './features/switchSection'
+import Languages from './features/languages'
+import Hobbies from './features/hobbies'
 
 export const makeStore = () => {
   return configureStore({
@@ -24,7 +26,9 @@ export const makeStore = () => {
         PersonalDetails,
         Experience,
         Educations,
-        Skills
+        Skills,
+        Languages,
+        Hobbies
     }
   })
 }

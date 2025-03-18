@@ -3,6 +3,7 @@ import { setLayout } from "@/lib/features/switchLayout";
 
 export function NavBarLayout() {
     const { layout } = useSelector((state) => state.SwitchLayout);
+    
 
     const dispatch = useDispatch();
     const handleLayout = (layout) => {
