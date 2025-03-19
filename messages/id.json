@@ -38,9 +38,10 @@
                 "exp": "Pengalaman Kerja",
                 "web": "Situs Web",
                 "education": "Pendidikan",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Keterampilan",
                 "custom1": "Kustom 1",
+                "language": "Bahasa",
                 "custom2": "Kustom 2",
                 "hobbies": "Hobi"
             },
@@ -103,7 +104,7 @@
         "email": "Masukkan Email Anda",
         "phone": "Masukkan nomor telepon Anda",
         "web": "Masukkan URL",
-        "linkedin": "Masukkan URL",
+        "linkedIn": "Masukkan URL",
         "custom1": "Kustom",
         "custom2": "Kustom"
     },

@@ -45,7 +45,7 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
         { placeholder: t("email"), name: "email", toggle: "Email", icon: <MdEmail /> },
         { placeholder: t("phone"), name: "phone", toggle: "Phone Number", icon: <FaPhone /> },
         { placeholder: t("web"), name: "url", toggle: "Website", icon: <AiOutlineLink /> },
-        { placeholder: t("linkedin"), name: "linkedIn", toggle: "LinkedIn", icon: <FaLinkedinIn /> },
+        { placeholder: t("linkedIn"), name: "linkedIn", toggle: "LinkedIn", icon: <FaLinkedinIn /> },
         { placeholder: t("custom1"), name: "custom1", toggle: "Custom 1", icon: <GoDotFill /> },
         { placeholder: t("custom2"), name: "custom2", toggle: "Custom 2", icon: <GoDotFill /> },
     ]

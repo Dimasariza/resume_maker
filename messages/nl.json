@@ -38,9 +38,10 @@
                 "exp": "Werkervaring",
                 "web": "Website",
                 "education": "Opleiding",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Vaardigheden",
                 "custom1": "Aangepast 1",
+                "language": "Talen",
                 "custom2": "Aangepast 2",
                 "hobbies": "Hobby's"
             },
@@ -103,7 +104,7 @@
         "email": "Voer je e-mailadres in",
         "phone": "Voer je telefoonnummer in",
         "web": "Voer de URL in",
-        "linkedin": "Voer de URL in",
+        "linkedIn": "Voer de URL in",
         "custom1": "Aangepast",
         "custom2": "Aangepast"
     },

@@ -38,9 +38,10 @@
                 "exp": "Arbetslivserfarenhet",
                 "web": "Webbplats",
                 "education": "Utbildning",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Färdigheter",
                 "custom1": "Anpassad 1",
+                "language": "Språk",
                 "custom2": "Anpassad 2",
                 "hobbies": "Hobbyer"
             },
@@ -103,7 +104,7 @@
         "email": "Ange din e-postadress",
         "phone": "Ange ditt telefonnummer",
         "web": "Ange URL",
-        "linkedin": "Ange URL",
+        "linkedIn": "Ange URL",
         "custom1": "Anpassad",
         "custom2": "Anpassad"
     },

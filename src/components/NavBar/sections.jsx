@@ -1,5 +1,5 @@
 "use client"
-import { setPictureToggle, switchToggle } from "@/lib/features/switchSection";
+import { switchToggle } from "@/lib/features/switchSection";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
@@ -22,21 +22,21 @@ export function NavBarSections() {
     const [customTemplate, setCustomTemplate] = useState(initiateTemplate)
 
     const toggle = [
-        { name : "Picture" },
-        { name : "Location" },
-        { name : "About Me" },
-        { name : "Phone Number" },
-        { name : "Role" },
-        { name : "Email" },
-        { name : "Work Experience" },
-        { name : "Website" },
-        { name : "Education" },
-        { name : "LinkedIn" },
-        { name : "Skills" },
-        { name : "Custom 1" },
-        { name : "Languages" },
-        { name : "Custom 2" },
-        { name : "Hobbies" },
+        { id: "picture", name : "Picture" },
+        { id: "location", name : "Location" },
+        { id: "aboutMe", name : "About Me" },
+        { id: "phone", name : "Phone Number" },
+        { id: "role", name : "Role" },
+        { id: "email", name : "Email" },
+        { id: "exp", name : "Work Experience" },
+        { id: "web", name : "Website" },
+        { id: "education", name : "Education" },
+        { id: "linkedIn", name : "LinkedIn" },
+        { id: "skills", name : "Skills" },
+        { id: "custom1", name : "Custom 1" },
+        { id: "languages", name : "Languages" },
+        { id: "custom2", name : "Custom 2" },
+        { id: "hobbies", name : "Hobbies" },
     ]
 
     return (
@@ -49,7 +49,7 @@ export function NavBarSections() {
                             <input type="checkbox" 
                                 checked={section[item.name]} 
                                 onChange={()=>dispatch(switchToggle(item.name))} 
-                                className="toggle toggle-xs" 
+                                className="toggle toggle-xs toggle-primary" 
                             />
                             { item.name }
                         </label>

@@ -38,9 +38,10 @@
                 "exp": "Doświadczenie zawodowe",
                 "web": "Strona internetowa",
                 "education": "Edukacja",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Umiejętności",
                 "custom1": "Niestandardowe 1",
+                "language": "Języki",
                 "custom2": "Niestandardowe 2",
                 "hobbies": "Hobby"
             },
@@ -103,7 +104,7 @@
         "email": "Wprowadź swój email",
         "phone": "Wprowadź swój numer telefonu",
         "web": "Wprowadź URL",
-        "linkedin": "Wprowadź URL",
+        "linkedIn": "Wprowadź URL",
         "custom1": "Niestandardowe",
         "custom2": "Niestandardowe"
     },

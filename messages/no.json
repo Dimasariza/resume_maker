@@ -38,9 +38,10 @@
                 "exp": "Arbeidserfaring",
                 "web": "Nettside",
                 "education": "Utdanning",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Ferdigheter",
                 "custom1": "Tilpasset 1",
+                "language": "Språk",
                 "custom2": "Tilpasset 2",
                 "hobbies": "Hobbyer"
             },
@@ -103,7 +104,7 @@
         "email": "Skriv inn din e-post",
         "phone": "Skriv inn ditt telefonnummer",
         "web": "Skriv inn URL",
-        "linkedin": "Skriv inn URL",
+        "linkedIn": "Skriv inn URL",
         "custom1": "Tilpasset",
         "custom2": "Tilpasset"
     },

@@ -38,9 +38,10 @@
                 "exp": "Expérience professionnelle",
                 "web": "Site web",
                 "education": "Éducation",
-                "linkedin": "LinkedIn",
+                "linkedIn": "LinkedIn",
                 "skills": "Compétences",
                 "custom1": "Personnalisé 1",
+                "language": "Langues",
                 "custom2": "Personnalisé 2",
                 "hobbies": "Loisirs"
             },
@@ -103,7 +104,7 @@
         "email": "Entrez votre e-mail",
         "phone": "Entrez votre numéro de téléphone",
         "web": "Entrez l'URL",
-        "linkedin": "Entrez l'URL",
+        "linkedIn": "Entrez l'URL",
         "custom1": "Personnalisé",
         "custom2": "Personnalisé"
     },
