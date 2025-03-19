@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Welcome to the page",
+        "content": "This is the Homepage content"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Layout",
+            "split": "Split Layout",
+            "classic": "Classic Layout",
+            "hybrid": "Hybrid layout"
+        },
+        "color": {
+            "title": "Color"
+        },
+        "typography": {
+            "title": "Typography",
+            "font": {
+                "title": "Font"
+            },
+            "size": {
+                "title": "Size",
+                "small": "Small",
+                "medium": "Medium",
+                "big": "Big"
+            }
+        },
+        "section": {
+            "title": "Sections",
+            "details": {
+                "title": "Personal Details",
+                "picture": "Picture",
+                "location": "Location",
+                "aboutMe": "About Me",
+                "phone": "Phone Number",
+                "role": "Role",
+                "email": "Email",
+                "exp": "Work Experience",
+                "web": "Website",
+                "education": "Education",
+                "linkedin": "LinkedIn",
+                "skills": "Skills",
+                "custom1": "Custom 1",
+                "custom2": "Custom 2",
+                "hobbies": "Hobbies"
+            },
+            "addCustom": {
+                "title": "Add Custom Section",
+                "type": {
+                    "select": "Select Type",
+                    "text": "Text Section",
+                    "list": "List Section"
+                },
+                "placement": {
+                    "select": "Select Placement",
+                    "top": "Top Area",
+                    "bottom": "Bottom Area",
+                    "left": "Left Column",
+                    "right": "Right Column"
+                }
+            }
+        },
+        "import": {
+            "title": "Import",
+            "badge": "New"
+        },
+        "download": {
+            "title": "Download"
+        } 
+    },
+    "Header": {
+        "picture": "Select your picture",
+        "name": "Your Name",
+        "role": "YOUR ROLE"
+    },
+    "AboutMe": {
+        "title": "ABOUT ME",
+        "placeholder": "Enter your professional summary",
+        "aiAssistant": {
+            "title": "WRITING ASSITANT",
+            "h1": "AI-Powered Writing Assistant",
+            "h2": "Summary",
+            "role": {
+                "title": "Role",
+                "placeholder": "Enter your role"
+            },
+            "level": {
+                "title": "Experience Level",
+                "little": "Little/No experience",
+                "some": "Some experience",
+                "lot": "A lot of experience"
+            },
+            "instructions": {
+                "title": "Instructions (optional)",
+                "placeholder": "Enter any spesific details you want to include (e.g. key skills, personal traits, industry focus)"
+            },
+            "generate": "Generate Summary"
+        }
+    },
+    "PersonalDetails": {
+        "title": "PERSONAL DETAILS",
+        "location": "Enter Location",
+        "email": "Enter your Email",
+        "phone": "Enter your phone",
+        "web": "Enter URL",
+        "linkedin": "Enter URL",
+        "custom1": "Custom",
+        "custom2": "Custom"
+    },
+    "Experiences": {
+        "title": "EXPERIENCE",
+        "employeer": "Employeer",
+        "position": "POSITION",
+        "fromUntil": "From - Until",
+        "desc": "Enter your work experience descrip tion",
+        "add": "Add",
+        "remove": "Remove",
+        "reorder": "Reorder",
+        "aiAssistant": {
+            "title": "WRITING ASSITANT",
+            "h1": "AI-Powered Writing Assistant",
+            "h2": "Work Experience",
+            "role": {
+                "title": "Role",
+                "placeholder": "Enter your role for bullet points suggestions"
+            },
+            "generate": "Generate Summary"
+        }
+    },
+    "Educations": {
+        "title": "EDUCATION",
+        "school": "School",
+        "degree": "DEGREE",
+        "fromUntil": "From - Until",
+        "add": "Add",
+        "remove": "Remove",
+        "reorder": "Reorder"
+    },
+    "Skills": {
+        "title": "SKILLS",
+        "placeholder": "Enter skill",
+        "add": "Add",
+        "remove": "Remove",
+        "reorder": "Reorder",
+        "aiAssistant": {
+            "title": "WRITING ASSITANT",
+            "h1": "AI-Powered Writing Assistant",
+            "h2": "Skills",
+            "role": {
+                "title": "Role",
+                "placeholder": "Enter your role for skill suggestions"
+            },
+            "generate": "Generate Summary"
+        }
+    },
+    "Languages": {
+        "title": "LANGUAGES",
+        "placeholder": "Enter language",
+        "add": "Add",
+        "remove": "Remove",
+        "reorder": "Reorder"
+    },
+    "Hobbies": {
+        "title": "HOBBIES",
+        "placeholder": "Enter hobby",
+        "add": "Add",
+        "remove": "Remove",
+        "reorder": "Reorder"
+    }
+}

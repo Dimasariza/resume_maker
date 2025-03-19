@@ -1,35 +1,48 @@
 "use client"
-import { setColor } from "@/lib/features/switchColor";
-import { useDispatch, useSelector } from "react-redux"
+import { setHexcode } from "@/lib/features/switchColor";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux"
 
 export function NavBarColor() {
+    const [randomColor, setRandomColor] = useState("#3490dc");
+    const colorRef = useRef();
     const dispatch = useDispatch();
     
-    const color = [
-        { name : "app-color-blue" },
-        { name : "app-color-purple" },
-        { name : "app-color-yellow" },
-        { name : "app-color-green" },
-        { name : "app-color-black" },
+    const colors = [
+        { name : "color-blue", hexcode: "#0082e6" },
+        { name : "color-purple", hexcode: "#b92a78" },
+        { name : "color-yellow", hexcode: "#f3840b" },
+        { name : "color-green", hexcode: "#2ab993" },
+        { name : "color-black", hexcode: "#000000" },
     ]
 
-    const handleSwitchColor = (color) => {
-        dispatch(setColor(color.name))
-    }
+    useEffect(()=> {
+        colorRef.current.style.background = randomColor;
+        dispatch(setHexcode(randomColor))
+    }, [randomColor])
 
     return (
         <div className="flex flex-col items-center justify-center">
             <fieldset className="fieldset">
                 {
-                    color.map((item, index) => (
-                        // <label className="flex gap-2 cursor-pointer items-center" key={index}>
-                        //     <input type="radio" name="theme-radios" className="radio radio-sm theme-controller size-15" value="default"/>
-                        // </label>
-                        <button onClick={()=>handleSwitchColor(item)} key={index} className={`btn btn-circle size-15 bg-${item}`}></button>
+                    colors.map((item) => (
+                        <button 
+                            onClick={()=>dispatch(setHexcode(item.hexcode))} 
+                            key={item.hexcode} 
+                            style={{background: item.hexcode}}
+                            className={`btn btn-circle size-15`}
+                        ></button>
                     ))
                 }   
-                <input type="color" className="btn-circle btn size-15" />
-
+                <label htmlFor="change_color" ref={colorRef} className="size-15 bg-red-500 rounded-full">
+                    <input 
+                        onChange={(e)=>setRandomColor(e.target.value)} 
+                        type="color" 
+                        id="change_color" 
+                        className="bg-transparent invisible"
+                        value={randomColor}
+                    />
+                </label>
             </fieldset>
         </div>
     )

@@ -1,3 +1,4 @@
+import daisyui from 'daisyui';
 // tailwind.config.js
 module.exports = {
     content: [
@@ -5,40 +6,28 @@ module.exports = {
       './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     plugins: [
-      require("daisyui")
+      daisyui
     ],
     theme: {
       extend: {
         colors: {
-          'app-color-blue': '#0082e6',
-          'app-color-purple': '#b92a78',
-          'app-color-yellow': '#f3840b',
-          'app-color-green': '#2ab993',
-          'app-color-black': '#000000',
-
-          "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
+            'base-200': '#000000',
+            customColor: "#ff5733",
         },
       },
-    },
+      fontFamily: {
+          sans: ['Roboto', 'sans-serif'],
+      },
+  },
     daisyui: {
       themes: [
         {
           light: {
-            ...require("daisyui/src/theming/themes")["light"],
-            "--primary-muted": "65% 0.2 295",
-          },
-        },
-        {
-          cupcake: {
-            ...require("daisyui/src/theming/themes")["cupcake"],
-            "--primary-muted": "87% 0.05 200",
-          },
-        },
-        // dark theme
-        {
-          dark: {
-            ...require("daisyui/src/theming/themes")["dark"],
-            "--primary-muted": "34% 0.2 289",
+            primary: "#000", // Use the custom color in a theme
+            secondary: "#1e40af",
+            accent: "#9333ea",
+            neutral: "#3d4451",
+            "base-100": "#ffffff",
           },
         },
       ],

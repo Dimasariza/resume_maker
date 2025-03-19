@@ -1,4 +1,5 @@
 import { setEmail, setLocation, setPhone, setURL, setPersonalTitle, setLinkedIn, setCustom1, setCustom2 } from "@/lib/features/personalDetails";
+import { useTranslations } from "next-intl";
 import { AiOutlineLink } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
@@ -7,6 +8,8 @@ import { MdEmail } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function PersonalDetails({viewTitle = true, detailClassname}) {
+    const t = useTranslations('PersonalDetails');
+    
     const { location, email, phone, url, personalTitle, linkedIn, custom1, custom2 } = useSelector((state) => state.PersonalDetails);
     const section = useSelector((state) => state.SwitchSection);
 
@@ -38,13 +41,13 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
     }
 
     const personalDetails = [
-        { placeholder: "Enter Location", name: "location", toggle: "Location", icon: <FaLocationDot /> },
-        { placeholder: "Enter your email", name: "email", toggle: "Email", icon: <MdEmail /> },
-        { placeholder: "Enter your phone", name: "phone", toggle: "Phone Number", icon: <FaPhone /> },
-        { placeholder: "Enter URL", name: "url", toggle: "Website", icon: <AiOutlineLink /> },
-        { placeholder: "Enter URL", name: "linkedIn", toggle: "LinkedIn", icon: <FaLinkedinIn /> },
-        { placeholder: "Custom", name: "custom1", toggle: "Custom 1", icon: <GoDotFill /> },
-        { placeholder: "Custom", name: "custom2", toggle: "Custom 2", icon: <GoDotFill /> },
+        { placeholder: t("location"), name: "location", toggle: "Location", icon: <FaLocationDot /> },
+        { placeholder: t("email"), name: "email", toggle: "Email", icon: <MdEmail /> },
+        { placeholder: t("phone"), name: "phone", toggle: "Phone Number", icon: <FaPhone /> },
+        { placeholder: t("web"), name: "url", toggle: "Website", icon: <AiOutlineLink /> },
+        { placeholder: t("linkedin"), name: "linkedIn", toggle: "LinkedIn", icon: <FaLinkedinIn /> },
+        { placeholder: t("custom1"), name: "custom1", toggle: "Custom 1", icon: <GoDotFill /> },
+        { placeholder: t("custom2"), name: "custom2", toggle: "Custom 2", icon: <GoDotFill /> },
     ]
 
     return (
@@ -53,7 +56,7 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
                 viewTitle &&
                 <input 
                     type="text" 
-                    placeholder="PERSONAL DETAILS" 
+                    placeholder={t("title")} 
                     value={personalTitle} 
                     onChange={(e)=>dispatch(setPersonalTitle(e.target.value))} 
                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 

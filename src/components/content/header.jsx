@@ -1,8 +1,11 @@
 import { setName, setPicture, setRole } from "@/lib/features/personalIdentity";
+import { useTranslations } from "next-intl";
 import { BsUpload } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Header({pictureClassName, identityClassName, section}) {
+    const t = useTranslations('Header');
+    
     const { name, role, picture } = useSelector((state) => state.PersonalIdentity);
     const dispatch = useDispatch();
 
@@ -31,7 +34,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
                             ?   <img src={picture} alt="profile" className="size-50 rounded-full bg-gray-100" />
                             :   <div>
                                     <BsUpload className="justify-self-center text-sm"/>
-                                    <span className="text-xs">Select your picture</span>
+                                    <span className="text-xs  text-customColor">{t("picture")}</span>
                                 </div>
                         }
                     </label>
@@ -42,7 +45,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
             <div className={`flex-col flex justify-center ${identityClassName}`}>
                 <input 
                     type="text" 
-                    placeholder="Your Name" 
+                    placeholder={t("name")} 
                     value={name} 
                     onChange={(e)=> dispatch(setName(e.target.value))} 
                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-4xl font-bold" 
@@ -52,7 +55,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
                     section["Role"] &&
                     <input 
                         type="text" 
-                        placeholder="YOUR ROLE" 
+                        placeholder={t("role")} 
                         value={role} 
                         onChange={(e)=> dispatch(setRole(e.target.value))} 
                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 

@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Velkommen til siden",
+        "content": "Dette er indholdet på hjemmesiden"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Layout",
+            "split": "Opdelt Layout",
+            "classic": "Klassisk Layout",
+            "hybrid": "Hybrid Layout"
+        },
+        "color": {
+            "title": "Farve"
+        },
+        "typography": {
+            "title": "Typografi",
+            "font": {
+                "title": "Skrifttype"
+            },
+            "size": {
+                "title": "Størrelse",
+                "small": "Lille",
+                "medium": "Mellem",
+                "big": "Stor"
+            }
+        },
+        "section": {
+            "title": "Sektioner",
+            "details": {
+                "title": "Personlige Detaljer",
+                "picture": "Billede",
+                "location": "Placering",
+                "aboutMe": "Om Mig",
+                "phone": "Telefonnummer",
+                "role": "Rolle",
+                "email": "Email",
+                "exp": "Erhvervserfaring",
+                "web": "Hjemmeside",
+                "education": "Uddannelse",
+                "linkedin": "LinkedIn",
+                "skills": "Kompetencer",
+                "custom1": "Brugerdefineret 1",
+                "custom2": "Brugerdefineret 2",
+                "hobbies": "Hobbyer"
+            },
+            "addCustom": {
+                "title": "Tilføj Brugerdefineret Sektion",
+                "type": {
+                    "select": "Vælg Type",
+                    "text": "Tekst Sektion",
+                    "list": "Liste Sektion"
+                },
+                "placement": {
+                    "select": "Vælg Placering",
+                    "top": "Øverste Område",
+                    "bottom": "Nederste Område",
+                    "left": "Venstre Kolonne",
+                    "right": "Højre Kolonne"
+                }
+            }
+        },
+        "import": {
+            "title": "Importér",
+            "badge": "Ny"
+        },
+        "download": {
+            "title": "Download"
+        } 
+    },
+    "Header": {
+        "picture": "Vælg dit billede",
+        "name": "Dit Navn",
+        "role": "DIN ROLLE"
+    },
+    "AboutMe": {
+        "title": "OM MIG",
+        "placeholder": "Indtast din professionelle beskrivelse",
+        "aiAssistant": {
+            "title": "SKRIVEASSISTENT",
+            "h1": "AI-drevet Skriveassistent",
+            "h2": "Resumé",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Indtast din rolle"
+            },
+            "level": {
+                "title": "Erfaringsniveau",
+                "little": "Lidt/Ingen erfaring",
+                "some": "Noget erfaring",
+                "lot": "Meget erfaring"
+            },
+            "instructions": {
+                "title": "Instruktioner (valgfrit)",
+                "placeholder": "Indtast specifikke detaljer, du vil inkludere (f.eks. nøglekompetencer, personlige egenskaber, branchefokus)"
+            },
+            "generate": "Generér Resumé"
+        }
+    },
+    "PersonalDetails": {
+        "title": "PERSONLIGE DETALJER",
+        "location": "Indtast Placering",
+        "email": "Indtast din Email",
+        "phone": "Indtast dit telefonnummer",
+        "web": "Indtast URL",
+        "linkedin": "Indtast URL",
+        "custom1": "Brugerdefineret",
+        "custom2": "Brugerdefineret"
+    },
+    "Experiences": {
+        "title": "ERFARING",
+        "employeer": "Arbejdsgiver",
+        "position": "STILLING",
+        "fromUntil": "Fra - Til",
+        "desc": "Indtast beskrivelse af din erhvervserfaring",
+        "add": "Tilføj",
+        "remove": "Fjern",
+        "reorder": "Omarranger",
+        "aiAssistant": {
+            "title": "SKRIVEASSISTENT",
+            "h1": "AI-drevet Skriveassistent",
+            "h2": "Erhvervserfaring",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Indtast din rolle for forslag til punktbeskrivelser"
+            },
+            "generate": "Generér Resumé"
+        }
+    },
+    "Educations": {
+        "title": "UDDANNELSE",
+        "school": "Skole",
+        "degree": "Uddannelsesgrad",
+        "fromUntil": "Fra - Til",
+        "add": "Tilføj",
+        "remove": "Fjern",
+        "reorder": "Omarranger"
+    },
+    "Skills": {
+        "title": "KOMPETENCER",
+        "placeholder": "Indtast kompetence",
+        "add": "Tilføj",
+        "remove": "Fjern",
+        "reorder": "Omarranger",
+        "aiAssistant": {
+            "title": "SKRIVEASSISTENT",
+            "h1": "AI-drevet Skriveassistent",
+            "h2": "Kompetencer",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Indtast din rolle for forslag til kompetencer"
+            },
+            "generate": "Generér Resumé"
+        }
+    },
+    "Languages": {
+        "title": "SPROG",
+        "placeholder": "Indtast sprog",
+        "add": "Tilføj",
+        "remove": "Fjern",
+        "reorder": "Omarranger"
+    },
+    "Hobbies": {
+        "title": "HOBBYER",
+        "placeholder": "Indtast hobby",
+        "add": "Tilføj",
+        "remove": "Fjern",
+        "reorder": "Omarranger"
+    }
+}

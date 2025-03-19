@@ -1,10 +1,13 @@
 "use client"
 import { setPictureToggle, switchToggle } from "@/lib/features/switchSection";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 
 export function NavBarSections() {    
+    const td = useTranslations('Navbar.section.details');
+    
     const section = useSelector((state) => state.SwitchSection);
     
     const dispatch = useDispatch();

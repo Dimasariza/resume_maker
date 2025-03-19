@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Willkommen auf der Seite",
+        "content": "Dies ist der Inhalt der Startseite"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Layout",
+            "split": "Geteiltes Layout",
+            "classic": "Klassisches Layout",
+            "hybrid": "Hybrides Layout"
+        },
+        "color": {
+            "title": "Farbe"
+        },
+        "typography": {
+            "title": "Typografie",
+            "font": {
+                "title": "Schriftart"
+            },
+            "size": {
+                "title": "Größe",
+                "small": "Klein",
+                "medium": "Mittel",
+                "big": "Groß"
+            }
+        },
+        "section": {
+            "title": "Abschnitte",
+            "details": {
+                "title": "Persönliche Details",
+                "picture": "Bild",
+                "location": "Standort",
+                "aboutMe": "Über mich",
+                "phone": "Telefonnummer",
+                "role": "Rolle",
+                "email": "E-Mail",
+                "exp": "Berufserfahrung",
+                "web": "Webseite",
+                "education": "Bildung",
+                "linkedin": "LinkedIn",
+                "skills": "Fähigkeiten",
+                "custom1": "Benutzerdefiniert 1",
+                "custom2": "Benutzerdefiniert 2",
+                "hobbies": "Hobbys"
+            },
+            "addCustom": {
+                "title": "Benutzerdefinierten Abschnitt hinzufügen",
+                "type": {
+                    "select": "Typ auswählen",
+                    "text": "Textabschnitt",
+                    "list": "Listenabschnitt"
+                },
+                "placement": {
+                    "select": "Platzierung auswählen",
+                    "top": "Oberer Bereich",
+                    "bottom": "Unterer Bereich",
+                    "left": "Linke Spalte",
+                    "right": "Rechte Spalte"
+                }
+            }
+        },
+        "import": {
+            "title": "Importieren",
+            "badge": "Neu"
+        },
+        "download": {
+            "title": "Herunterladen"
+        }
+    },
+    "Header": {
+        "picture": "Wählen Sie Ihr Bild",
+        "name": "Ihr Name",
+        "role": "IHRE ROLLE"
+    },
+    "AboutMe": {
+        "title": "ÜBER MICH",
+        "placeholder": "Geben Sie Ihre berufliche Zusammenfassung ein",
+        "aiAssistant": {
+            "title": "SCHREIBASSISTENT",
+            "h1": "KI-gestützter Schreibassistent",
+            "h2": "Zusammenfassung",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Geben Sie Ihre Rolle ein"
+            },
+            "level": {
+                "title": "Erfahrungslevel",
+                "little": "Wenig/Keine Erfahrung",
+                "some": "Etwas Erfahrung",
+                "lot": "Viel Erfahrung"
+            },
+            "instructions": {
+                "title": "Anweisungen (optional)",
+                "placeholder": "Geben Sie spezifische Details ein, die Sie einfügen möchten (z. B. Schlüsselqualifikationen, persönliche Eigenschaften, Branchenfokus)"
+            },
+            "generate": "Zusammenfassung generieren"
+        }
+    },
+    "PersonalDetails": {
+        "title": "PERSÖNLICHE DETAILS",
+        "location": "Standort eingeben",
+        "email": "E-Mail eingeben",
+        "phone": "Telefonnummer eingeben",
+        "web": "URL eingeben",
+        "linkedin": "URL eingeben",
+        "custom1": "Benutzerdefiniert",
+        "custom2": "Benutzerdefiniert"
+    },
+    "Experiences": {
+        "title": "ERFAHRUNG",
+        "employeer": "Arbeitgeber",
+        "position": "POSITION",
+        "fromUntil": "Von - Bis",
+        "desc": "Geben Sie Ihre Berufserfahrungsbeschreibung ein",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "reorder": "Neu anordnen",
+        "aiAssistant": {
+            "title": "SCHREIBASSISTENT",
+            "h1": "KI-gestützter Schreibassistent",
+            "h2": "Berufserfahrung",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Geben Sie Ihre Rolle für Vorschläge zu Aufzählungspunkten ein"
+            },
+            "generate": "Zusammenfassung generieren"
+        }
+    },
+    "Educations": {
+        "title": "BILDUNG",
+        "school": "Schule",
+        "degree": "ABSCHLUSS",
+        "fromUntil": "Von - Bis",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "reorder": "Neu anordnen"
+    },
+    "Skills": {
+        "title": "FÄHIGKEITEN",
+        "placeholder": "Fähigkeit eingeben",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "reorder": "Neu anordnen",
+        "aiAssistant": {
+            "title": "SCHREIBASSISTENT",
+            "h1": "KI-gestützter Schreibassistent",
+            "h2": "Fähigkeiten",
+            "role": {
+                "title": "Rolle",
+                "placeholder": "Geben Sie Ihre Rolle für Vorschläge zu Fähigkeiten ein"
+            },
+            "generate": "Zusammenfassung generieren"
+        }
+    },
+    "Languages": {
+        "title": "SPRACHEN",
+        "placeholder": "Sprache eingeben",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "reorder": "Neu anordnen"
+    },
+    "Hobbies": {
+        "title": "HOBBYS",
+        "placeholder": "Hobby eingeben",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "reorder": "Neu anordnen"
+    }
+}

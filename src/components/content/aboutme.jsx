@@ -1,11 +1,14 @@
 "use client"
 
 import { setDescription, setSummaryTitle } from "@/lib/features/personalSummary";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { PiStarFourDuotone } from "react-icons/pi";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function AboutMe({viewTitle = true}) {
+    const t = useTranslations('AboutMe');
+    
     const [viewButton, setViewButton] = useState(false);
 
     const { name, role } = useSelector((state) => state.PersonalSummary);
@@ -24,7 +27,7 @@ export default function AboutMe({viewTitle = true}) {
                     htmlFor="about_me_modal" 
                     className="btn absolute right-2 -top-2 btn-xs rounded-full"
                 >
-                    <PiStarFourDuotone />WRITING ASSISTANT
+                    <PiStarFourDuotone />{t("aiAssistant.title")}
                 </label>
             }
 
@@ -32,7 +35,7 @@ export default function AboutMe({viewTitle = true}) {
                 viewTitle &&
                 <input 
                     type="text" 
-                    placeholder="ABOUT ME" 
+                    placeholder={t("title")} 
                     value={name} 
                     onChange={(e)=> dispatch(setSummaryTitle(e.target.value))} 
                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-2xl font-bold w-full" 
@@ -42,7 +45,7 @@ export default function AboutMe({viewTitle = true}) {
 
             <input 
                 type="text" 
-                placeholder="Enter your professional summary" 
+                placeholder={t("placeholder")} 
                 value={role} 
                 onChange={(e)=> dispatch(setDescription(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold w-full" 

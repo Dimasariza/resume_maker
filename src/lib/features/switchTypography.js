@@ -14,12 +14,12 @@ export const switchTypography = createSlice({
     setFont(state, action) {
       state.font = action.payload;    
     },
-    setSize(state, action) {
+    setFontSize(state, action) {
       state.size = action.payload;    
     },
   }
 });
 
-export const { setFont, setSize } = switchTypography.actions;
+export const { setFont, setFontSize } = switchTypography.actions;
 
 export default switchTypography.reducer;

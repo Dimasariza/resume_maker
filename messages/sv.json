@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Välkommen till sidan",
+        "content": "Detta är innehållet på huvudsidan"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Layout",
+            "split": "Delad layout",
+            "classic": "Klassisk layout",
+            "hybrid": "Hybridlayout"
+        },
+        "color": {
+            "title": "Färg"
+        },
+        "typography": {
+            "title": "Typografi",
+            "font": {
+                "title": "Teckensnitt"
+            },
+            "size": {
+                "title": "Storlek",
+                "small": "Liten",
+                "medium": "Medium",
+                "big": "Stor"
+            }
+        },
+        "section": {
+            "title": "Sektioner",
+            "details": {
+                "title": "Personliga detaljer",
+                "picture": "Bild",
+                "location": "Plats",
+                "aboutMe": "Om mig",
+                "phone": "Telefonnummer",
+                "role": "Roll",
+                "email": "E-post",
+                "exp": "Arbetslivserfarenhet",
+                "web": "Webbplats",
+                "education": "Utbildning",
+                "linkedin": "LinkedIn",
+                "skills": "Färdigheter",
+                "custom1": "Anpassad 1",
+                "custom2": "Anpassad 2",
+                "hobbies": "Hobbyer"
+            },
+            "addCustom": {
+                "title": "Lägg till anpassad sektion",
+                "type": {
+                    "select": "Välj typ",
+                    "text": "Textsektion",
+                    "list": "Listsektion"
+                },
+                "placement": {
+                    "select": "Välj placering",
+                    "top": "Övre område",
+                    "bottom": "Nedre område",
+                    "left": "Vänster kolumn",
+                    "right": "Höger kolumn"
+                }
+            }
+        },
+        "import": {
+            "title": "Importera",
+            "badge": "Ny"
+        },
+        "download": {
+            "title": "Ladda ner"
+        }
+    },
+    "Header": {
+        "picture": "Välj din bild",
+        "name": "Ditt namn",
+        "role": "DIN ROLL"
+    },
+    "AboutMe": {
+        "title": "OM MIG",
+        "placeholder": "Ange din professionella sammanfattning",
+        "aiAssistant": {
+            "title": "SKRIVASSISTENT",
+            "h1": "AI-driven skrivassistent",
+            "h2": "Sammanfattning",
+            "role": {
+                "title": "Roll",
+                "placeholder": "Ange din roll"
+            },
+            "level": {
+                "title": "Erfarenhetsnivå",
+                "little": "Lite/Ingen erfarenhet",
+                "some": "Viss erfarenhet",
+                "lot": "Mycket erfarenhet"
+            },
+            "instructions": {
+                "title": "Instruktioner (valfritt)",
+                "placeholder": "Ange specifika detaljer du vill inkludera (t.ex. nyckelfärdigheter, personliga egenskaper, branschfokus)"
+            },
+            "generate": "Generera sammanfattning"
+        }
+    },
+    "PersonalDetails": {
+        "title": "PERSONLIGA DETALJER",
+        "location": "Ange plats",
+        "email": "Ange din e-postadress",
+        "phone": "Ange ditt telefonnummer",
+        "web": "Ange URL",
+        "linkedin": "Ange URL",
+        "custom1": "Anpassad",
+        "custom2": "Anpassad"
+    },
+    "Experiences": {
+        "title": "ERFARENHET",
+        "employeer": "Arbetsgivare",
+        "position": "POSITION",
+        "fromUntil": "Från - Till",
+        "desc": "Ange beskrivningen av din arbetslivserfarenhet",
+        "add": "Lägg till",
+        "remove": "Ta bort",
+        "reorder": "Ordna om",
+        "aiAssistant": {
+            "title": "SKRIVASSISTENT",
+            "h1": "AI-driven skrivassistent",
+            "h2": "Arbetslivserfarenhet",
+            "role": {
+                "title": "Roll",
+                "placeholder": "Ange din roll för förslag på nyckelpunkter"
+            },
+            "generate": "Generera sammanfattning"
+        }
+    },
+    "Educations": {
+        "title": "UTBILDNING",
+        "school": "Skola",
+        "degree": "EXAMEN",
+        "fromUntil": "Från - Till",
+        "add": "Lägg till",
+        "remove": "Ta bort",
+        "reorder": "Ordna om"
+    },
+    "Skills": {
+        "title": "FÄRDIGHETER",
+        "placeholder": "Ange en färdighet",
+        "add": "Lägg till",
+        "remove": "Ta bort",
+        "reorder": "Ordna om",
+        "aiAssistant": {
+            "title": "SKRIVASSISTENT",
+            "h1": "AI-driven skrivassistent",
+            "h2": "Färdigheter",
+            "role": {
+                "title": "Roll",
+                "placeholder": "Ange din roll för förslag på färdigheter"
+            },
+            "generate": "Generera sammanfattning"
+        }
+    },
+    "Languages": {
+        "title": "SPRÅK",
+        "placeholder": "Ange ett språk",
+        "add": "Lägg till",
+        "remove": "Ta bort",
+        "reorder": "Ordna om"
+    },
+    "Hobbies": {
+        "title": "HOBBYER",
+        "placeholder": "Ange en hobby",
+        "add": "Lägg till",
+        "remove": "Ta bort",
+        "reorder": "Ordna om"
+    }
+}

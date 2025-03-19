@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Welkom op de pagina",
+        "content": "Dit is de inhoud van de hoofdpagina"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Indeling",
+            "split": "Gesplitste indeling",
+            "classic": "Klassieke indeling",
+            "hybrid": "Hybride indeling"
+        },
+        "color": {
+            "title": "Kleur"
+        },
+        "typography": {
+            "title": "Typografie",
+            "font": {
+                "title": "Lettertype"
+            },
+            "size": {
+                "title": "Grootte",
+                "small": "Klein",
+                "medium": "Middelgroot",
+                "big": "Groot"
+            }
+        },
+        "section": {
+            "title": "Secties",
+            "details": {
+                "title": "Persoonlijke gegevens",
+                "picture": "Foto",
+                "location": "Locatie",
+                "aboutMe": "Over mij",
+                "phone": "Telefoonnummer",
+                "role": "Rol",
+                "email": "E-mailadres",
+                "exp": "Werkervaring",
+                "web": "Website",
+                "education": "Opleiding",
+                "linkedin": "LinkedIn",
+                "skills": "Vaardigheden",
+                "custom1": "Aangepast 1",
+                "custom2": "Aangepast 2",
+                "hobbies": "Hobby's"
+            },
+            "addCustom": {
+                "title": "Aangepaste sectie toevoegen",
+                "type": {
+                    "select": "Selecteer type",
+                    "text": "Tekstsectie",
+                    "list": "Lijstsectie"
+                },
+                "placement": {
+                    "select": "Selecteer locatie",
+                    "top": "Bovenste gebied",
+                    "bottom": "Onderste gebied",
+                    "left": "Linkerkolom",
+                    "right": "Rechterkolom"
+                }
+            }
+        },
+        "import": {
+            "title": "Importeren",
+            "badge": "Nieuw"
+        },
+        "download": {
+            "title": "Downloaden"
+        }
+    },
+    "Header": {
+        "picture": "Selecteer je foto",
+        "name": "Je naam",
+        "role": "JE ROL"
+    },
+    "AboutMe": {
+        "title": "OVER MIJ",
+        "placeholder": "Voer je professionele samenvatting in",
+        "aiAssistant": {
+            "title": "SCHRIJFHULP",
+            "h1": "AI-gestuurde schrijfhulp",
+            "h2": "Samenvatting",
+            "role": {
+                "title": "Rol",
+                "placeholder": "Voer je rol in"
+            },
+            "level": {
+                "title": "Ervaringsniveau",
+                "little": "Weinig/Geen ervaring",
+                "some": "Enige ervaring",
+                "lot": "Veel ervaring"
+            },
+            "instructions": {
+                "title": "Instructies (optioneel)",
+                "placeholder": "Voer specifieke details in die je wilt opnemen (bijvoorbeeld kernvaardigheden, persoonlijke eigenschappen, branchefocus)"
+            },
+            "generate": "Samenvatting genereren"
+        }
+    },
+    "PersonalDetails": {
+        "title": "PERSOONLIJKE GEGEVENS",
+        "location": "Voer de locatie in",
+        "email": "Voer je e-mailadres in",
+        "phone": "Voer je telefoonnummer in",
+        "web": "Voer de URL in",
+        "linkedin": "Voer de URL in",
+        "custom1": "Aangepast",
+        "custom2": "Aangepast"
+    },
+    "Experiences": {
+        "title": "ERVARING",
+        "employeer": "Werkgever",
+        "position": "FUNCTIE",
+        "fromUntil": "Van - Tot",
+        "desc": "Voer de beschrijving van je werkervaring in",
+        "add": "Toevoegen",
+        "remove": "Verwijderen",
+        "reorder": "Herschikken",
+        "aiAssistant": {
+            "title": "SCHRIJFHULP",
+            "h1": "AI-gestuurde schrijfhulp",
+            "h2": "Werkervaring",
+            "role": {
+                "title": "Rol",
+                "placeholder": "Voer je rol in voor suggesties van kernpunten"
+            },
+            "generate": "Samenvatting genereren"
+        }
+    },
+    "Educations": {
+        "title": "OPLEIDING",
+        "school": "School",
+        "degree": "DIPLOMA",
+        "fromUntil": "Van - Tot",
+        "add": "Toevoegen",
+        "remove": "Verwijderen",
+        "reorder": "Herschikken"
+    },
+    "Skills": {
+        "title": "VAARDIGHEDEN",
+        "placeholder": "Voer een vaardigheid in",
+        "add": "Toevoegen",
+        "remove": "Verwijderen",
+        "reorder": "Herschikken",
+        "aiAssistant": {
+            "title": "SCHRIJFHULP",
+            "h1": "AI-gestuurde schrijfhulp",
+            "h2": "Vaardigheden",
+            "role": {
+                "title": "Rol",
+                "placeholder": "Voer je rol in voor suggesties van vaardigheden"
+            },
+            "generate": "Samenvatting genereren"
+        }
+    },
+    "Languages": {
+        "title": "TALEN",
+        "placeholder": "Voer een taal in",
+        "add": "Toevoegen",
+        "remove": "Verwijderen",
+        "reorder": "Herschikken"
+    },
+    "Hobbies": {
+        "title": "HOBBY'S",
+        "placeholder": "Voer een hobby in",
+        "add": "Toevoegen",
+        "remove": "Verwijderen",
+        "reorder": "Herschikken"
+    }
+}

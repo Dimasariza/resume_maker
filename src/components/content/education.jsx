@@ -5,8 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { createSwapy } from "swapy";
 import { setDegree, setEduFromUntil, setSchool, setEduTitle, addEducation } from "@/lib/features/education";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslations } from "next-intl";
 
 export default function Education({reorderComponent, fitDegree = false}) {
+    const t = useTranslations('Educations');
+    
     const [viewButton, setViewButton] = useState(false);
 
     const { title, listOfEducations } = useSelector((state) => state.Educations);
@@ -28,7 +31,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
         <div ref={containerRef}> 
             <input 
                 type="text" 
-                placeholder="EDUCATION" 
+                placeholder={t("title")}
                 value={title} 
                 onChange={(e)=> dispatch(setEduTitle(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
@@ -54,11 +57,11 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         <>
                                             <button 
                                                 className="btn btn-xs btn-circle tooltip" 
-                                                data-tip="Remove"
+                                                data-tip={t("remove")}
                                             ><FaMinus /></button>
                                             <button 
                                                 className="btn btn-xs btn-circle tooltip" 
-                                                data-tip="Reorder" 
+                                                data-tip={t("reorder")} 
                                                 data-swapy-handle
                                             ><FaArrowsAltV /></button>
                                         </>
@@ -66,7 +69,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                     <button 
                                         onClick={()=>dispatch(addEducation())}
                                         className="btn btn-xs btn-circle tooltip" 
-                                        data-tip="Add"
+                                        data-tip={t("add")}
                                     ><GoPlus /></button>
                                 </div> 
                             }  
@@ -75,7 +78,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                 reorderComponent(
                                     <input 
                                         type="text" 
-                                        placeholder="School" 
+                                        placeholder={t("school")} 
                                         value={school} 
                                         onChange={(e)=>dispatch(setSchool({index, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2" 
@@ -83,7 +86,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                     />,
                                     <input 
                                         type="text" 
-                                        placeholder="DEGREE" 
+                                        placeholder={t("degree")} 
                                         value={degree} 
                                         onChange={(e)=>dispatch(setDegree({index, value: e.target.value}))} 
                                         className={
@@ -94,7 +97,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                     />,
                                     <input 
                                         type="text" 
-                                        placeholder="From - Until" 
+                                        placeholder={t("fromUntil")} 
                                         value={fromUntil} 
                                         onChange={(e)=>dispatch(setEduFromUntil({index, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold field-sizing-content" 

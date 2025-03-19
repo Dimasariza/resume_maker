@@ -13,6 +13,7 @@ import Skills from './features/skills'
 import SwitchSection from './features/switchSection'
 import Languages from './features/languages'
 import Hobbies from './features/hobbies'
+import SwitchLanguage from './features/switchLanguage'
 
 export const makeStore = () => {
   return configureStore({
@@ -21,6 +22,7 @@ export const makeStore = () => {
         SwitchColor,
         SwitchTypography,
         SwitchSection,
+        SwitchLanguage,
         PersonalIdentity,
         PersonalSummary,
         PersonalDetails,

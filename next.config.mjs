@@ -1,8 +1,11 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  // swcMinify: true,
+  // output: 'export',
+  // trailingSlash: true,
   // experimental: {
   //   turbo: {
   //     resolveExtensions: [
@@ -18,4 +21,4 @@ const nextConfig = {
   // },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

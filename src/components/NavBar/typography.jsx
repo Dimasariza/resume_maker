@@ -1,7 +1,10 @@
-import { setFont, setSize } from "@/lib/features/switchTypography";
+import { setFont, setFontSize } from "@/lib/features/switchTypography";
+import { useTranslations } from "next-intl";
 import { useDispatch, useSelector } from "react-redux";
 
 export function NavBarTypography() {
+    const t = useTranslations('Navbar.typography');
+
     const { font, size } = useSelector((state) => state.SwitchTypography);
     const dispatch = useDispatch();
 
@@ -19,9 +22,9 @@ export function NavBarTypography() {
     ]
 
     const typographySize = [
-        { name: "Small" },
-        { name: "Medium" },
-        { name: "Big" },
+        { name: t("size.small"), id: "small" },
+        { name: t("size.medium"), id: "medium" },
+        { name: t("size.big"), id: "big" },
     ]
 
     const handleClickFont = (font) => {
@@ -33,6 +36,7 @@ export function NavBarTypography() {
 
     return (
         <div className="flex flex-col gap-2">
+            <label htmlFor="">{t("font.title")}</label>
             <div className="dropdown dropdown-center w-full">
                 <div tabIndex={1} role="button" className="btn w-full capitalize">{font}</div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
@@ -44,16 +48,19 @@ export function NavBarTypography() {
                 </ul>
             </div>
 
+            <label htmlFor="">{t("size.title")}</label>
             <div className="flex join justify-center">
+                
                 {
-                    typographySize.map((item, index) => (
+                    typographySize.map(({name, id}) => (
                         <input 
-                            onClick={() => dispatch(setSize(item.name))} 
-                            key={index} 
+                            onChange={() => dispatch(setFontSize(id))} 
+                            key={id} 
                             className="join-item btn" 
                             type="radio" 
-                            name="options" 
-                            aria-label={item.name} 
+                            name="typography" 
+                            aria-label={name} 
+                            checked={id === size}
                         />
                     ))
                 }

@@ -7,8 +7,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createSwapy, utils } from "swapy";
 import { useDispatch, useSelector } from "react-redux";
 import { addLanguage, setLanguage, setLanguagesTitle } from "@/lib/features/languages";
+import { useTranslations } from "next-intl";
 
 export default function Languages() {
+    const t = useTranslations('Languages');
+    
     const [viewButton, setViewButton] = useState(null);
     const { title, listOfLanguages } = useSelector((state) => state.Languages);
     const dispatch = useDispatch();
@@ -46,7 +49,7 @@ export default function Languages() {
         >         
             <input 
                 type="text" 
-                placeholder="LANGUAGES" 
+                placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setLanguagesTitle(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
@@ -71,18 +74,18 @@ export default function Languages() {
                                             <>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Remove" 
+                                                    data-tip={t("remove")} 
                                                 ><FaMinus /></button>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Reorder"
+                                                    data-tip={t("reorder")} 
                                                     data-swapy-handle
                                                 ><VscArrowSwap /></button>
                                             </>
                                         }
                                         <button 
                                             className="btn btn-xs btn-circle tooltip" 
-                                            data-tip="Add" 
+                                            data-tip={t("add")}  
                                             onClick={()=>dispatch(addLanguage())}
                                         ><GoPlus /></button>
                                     </div>
@@ -90,7 +93,7 @@ export default function Languages() {
 
                                 <input 
                                     type="text" 
-                                    placeholder="Enter language" 
+                                    placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setLanguage({index: item.id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 

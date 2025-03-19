@@ -3,7 +3,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  layout: 'Split Layout'
+  activeLayout: 'split'
 };
 
 export const switchLayoutSlice = createSlice({ 
@@ -11,7 +11,7 @@ export const switchLayoutSlice = createSlice({
   initialState,
   reducers: {
     setLayout(state, action) {
-      state.layout = action.payload;    
+      state.activeLayout = action.payload;    
     }
   }
 });

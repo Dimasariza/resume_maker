@@ -3,19 +3,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  color: 'blue',
+  name: 'blue',
+  hexcode: '#0082e6'
 };
 
 export const switchColor = createSlice({ 
   name: 'switcColor',
   initialState,
   reducers: {
-    setColor(state, action) {
-      state.color = action.payload;    
+    setColorName(state, action) {
+      state.name = action.payload;    
     },
+    setHexcode(state, action) {
+      state.hexcode = action.payload
+    }
   }
 });
 
-export const { setColor } = switchColor.actions;
+export const { setColorName, setHexcode } = switchColor.actions;
 
 export default switchColor.reducer;

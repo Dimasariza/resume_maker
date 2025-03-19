@@ -5,8 +5,11 @@ import { FaArrowsAltV } from "react-icons/fa";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setDescription, setEmployeer, setExpFromUntil, setPosition, setExpTitle, addExperience } from "@/lib/features/experience";
+import { useTranslations } from "next-intl";
 
 export default function Experience({reorderComponent, fitPosition = false}) {
+    const t = useTranslations('Experiences');
+    
     const [viewButton, setViewButton] = useState(false);
 
     const { title, listOfExperiences } = useSelector((state) => state.Experience);
@@ -16,7 +19,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
         <>         
             <input 
                 type="text" 
-                placeholder="EXPERIENCE" 
+                placeholder={t("title")}
                 value={title} 
                 onChange={(e)=>dispatch(setExpTitle(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
@@ -37,18 +40,20 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                             {
                                 viewButton === index &&
                                 <div className="absolute right-2 -top-2 flex gap-1">
-                                    <label htmlFor="experience_modal" className="btn btn-xs rounded-full"><PiStarFourDuotone />WRITING ASSISTANT</label>
+                                    <label htmlFor="experience_modal" className="btn btn-xs rounded-full">
+                                        <PiStarFourDuotone />{t("aiAssistant.title")}
+                                    </label>
                                     {
                                         listOfExperiences.length > 1 &&
                                         <>
-                                            <button className="btn btn-xs btn-circle tooltip" data-tip="Remove"><FaMinus /></button>
-                                            <button className="btn btn-xs btn-circle tooltip" data-tip="Reorder"><FaArrowsAltV /></button>
+                                            <button className="btn btn-xs btn-circle tooltip" data-tip={t("remove")}><FaMinus /></button>
+                                            <button className="btn btn-xs btn-circle tooltip" data-tip={t("reorder")}><FaArrowsAltV /></button>
                                         </>
                                     }
                                     <button  
                                         onClick={()=>dispatch(addExperience())}
                                         className="btn btn-xs btn-circle tooltip" 
-                                        data-tip="Add"
+                                        data-tip={t("add")}
                                     ><GoPlus /></button>
                                 </div> 
                             }      
@@ -57,7 +62,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                 reorderComponent(
                                     <input 
                                         type="text" 
-                                        placeholder="Employer" 
+                                        placeholder={t("employeer")} 
                                         value={employeer} 
                                         onChange={(e)=>dispatch(setEmployeer({index, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2" 
@@ -65,7 +70,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                     />,
                                     <input 
                                         type="text" 
-                                        placeholder="POSITION" 
+                                        placeholder={t("position")}
                                         value={position} 
                                         onChange={(e)=>dispatch(setPosition({index, value: e.target.value}))} 
                                         className={
@@ -76,7 +81,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                     />,
                                     <input 
                                         type="text" 
-                                        placeholder="From - Until" 
+                                        placeholder={t("fromUntil")}
                                         value={fromUntil} 
                                         onChange={(e)=>dispatch(setExpFromUntil({index, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold field-sizing-content" 
@@ -84,7 +89,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                     />,
                                     <input 
                                         type="text" 
-                                        placeholder="Enter your work experience description" 
+                                        placeholder={t("desc")} 
                                         value={description} 
                                         onChange={(e)=>dispatch(setDescription({index, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold w-full" 

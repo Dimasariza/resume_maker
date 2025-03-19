@@ -2,12 +2,12 @@ import SplitLayout from "@components/Layout/splitlayout";
 import ClassicLayout from "@components/Layout/classiclayout";
 import HybridLayout from "@components/Layout/hybridlayout";
 import { useSelector } from "react-redux";
-import { useRef } from "react";
+import { act, useRef } from "react";
 import html2canvas from "html2canvas-pro";
 import jsPDF from "jspdf";
 
 export function Content (params) {
-    const acativeLayout = useSelector((state) => state.SwitchLayout.layout);
+    const { activeLayout } = useSelector((state) => state.SwitchLayout);
 
     const printRef = useRef(null);
 
@@ -35,12 +35,12 @@ export function Content (params) {
     }
 
     const getActiveLayout = () => {
-        switch (acativeLayout) {
-            case "Split Layout":
+        switch (activeLayout) {
+            case "split":
                 return <SplitLayout />
-            case "Classic Layout":
+            case "classic":
                 return <ClassicLayout />
-            case "Hybrid Layout":
+            case "hybrid":
                 return <HybridLayout />
             default:
                 return <SplitLayout />
@@ -49,7 +49,7 @@ export function Content (params) {
 
     return (
         <section ref={printRef} className="flex h-full min-h-screen bg-title  w-4/5 mt-3">
-            <div className="text-black w-full p-10 bg-app-color-blue">
+            <div className="text-black w-full p-10 bg-white">
                 {/* <button onClick={handleDownloadPDF}>Print PDF</button> */}
                 { getActiveLayout() }
             </div>

@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addHobbie, setHobbie, setHobbiesTitle } from "@/lib/features/hobbies";
 
 export default function Hobbies() {
+    const t = useTranslations('Hobbies');
+
     const [viewButton, setViewButton] = useState(null);
     const { title, listOfHobbies } = useSelector((state) => state.Hobbies);
     const dispatch = useDispatch();
@@ -46,7 +48,7 @@ export default function Hobbies() {
         >         
             <input 
                 type="text" 
-                placeholder="HOBBIES" 
+                placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setHobbiesTitle(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
@@ -71,18 +73,18 @@ export default function Hobbies() {
                                             <>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Remove" 
+                                                    data-tip={t("remove")}  
                                                 ><FaMinus /></button>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Reorder"
+                                                    data-tip={t("reorder")} 
                                                     data-swapy-handle
                                                 ><VscArrowSwap /></button>
                                             </>
                                         }
                                         <button 
                                             className="btn btn-xs btn-circle tooltip" 
-                                            data-tip="Add" 
+                                            data-tip={t("add")}  
                                             onClick={()=>dispatch(addHobbie())}
                                         ><GoPlus /></button>
                                     </div>
@@ -90,7 +92,7 @@ export default function Hobbies() {
 
                                 <input 
                                     type="text" 
-                                    placeholder="Enter hobby" 
+                                    placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setHobbie({index: item.id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 

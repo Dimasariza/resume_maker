@@ -8,8 +8,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createSwapy, utils } from "swapy";
 import { addSkill, setSkill, setSkillTitle } from "@/lib/features/skills";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
+    const t = useTranslations('Skills');
+    
     const [viewButton, setViewButton] = useState({assitant: false, skill: false});
     const { title, listOfSkills } = useSelector((state) => state.Skills);
     const dispatch = useDispatch();
@@ -48,13 +51,13 @@ export default function Skills() {
             {
                 viewButton.assitant && 
                 <label htmlFor="skills_modal" className="btn absolute right-2 -top-2 btn-xs rounded-full">
-                    <PiStarFourDuotone />WRITING ASSISTANT
+                    <PiStarFourDuotone />{t("aiAssistant.title")}
                 </label>
             } 
 
             <input 
                 type="text" 
-                placeholder="SKILLS" 
+                placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setSkillTitle(e.target.value))} 
                 className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
@@ -79,18 +82,18 @@ export default function Skills() {
                                             <>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Remove" 
+                                                    data-tip={t("remove")} 
                                                 ><FaMinus /></button>
                                                 <button 
                                                     className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip="Reorder"
+                                                    data-tip={t("reorder")}
                                                     data-swapy-handle
                                                 ><VscArrowSwap /></button>
                                             </>
                                         }
                                         <button 
                                             className="btn btn-xs btn-circle tooltip" 
-                                            data-tip="Add" 
+                                            data-tip={t("add")} 
                                             onClick={()=>dispatch(addSkill())}
                                         ><GoPlus /></button>
                                     </div>
@@ -98,7 +101,7 @@ export default function Skills() {
 
                                 <input 
                                     type="text" 
-                                    placeholder="Enter skill" 
+                                    placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setSkill({index: item.id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 

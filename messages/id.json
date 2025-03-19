@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Selamat datang di halaman",
+        "content": "Ini adalah konten Halaman Utama"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Tata Letak",
+            "split": "Tata Letak Terpisah",
+            "classic": "Tata Letak Klasik",
+            "hybrid": "Tata Letak Hibrida"
+        },
+        "color": {
+            "title": "Warna"
+        },
+        "typography": {
+            "title": "Tipografi",
+            "font": {
+                "title": "Font"
+            },
+            "size": {
+                "title": "Ukuran",
+                "small": "Kecil",
+                "medium": "Sedang",
+                "big": "Besar"
+            }
+        },
+        "section": {
+            "title": "Bagian",
+            "details": {
+                "title": "Detail Pribadi",
+                "picture": "Gambar",
+                "location": "Lokasi",
+                "aboutMe": "Tentang Saya",
+                "phone": "Nomor Telepon",
+                "role": "Peran",
+                "email": "Email",
+                "exp": "Pengalaman Kerja",
+                "web": "Situs Web",
+                "education": "Pendidikan",
+                "linkedin": "LinkedIn",
+                "skills": "Keterampilan",
+                "custom1": "Kustom 1",
+                "custom2": "Kustom 2",
+                "hobbies": "Hobi"
+            },
+            "addCustom": {
+                "title": "Tambahkan Bagian Kustom",
+                "type": {
+                    "select": "Pilih Jenis",
+                    "text": "Bagian Teks",
+                    "list": "Bagian Daftar"
+                },
+                "placement": {
+                    "select": "Pilih Penempatan",
+                    "top": "Area Atas",
+                    "bottom": "Area Bawah",
+                    "left": "Kolom Kiri",
+                    "right": "Kolom Kanan"
+                }
+            }
+        },
+        "import": {
+            "title": "Impor",
+            "badge": "Baru"
+        },
+        "download": {
+            "title": "Unduh"
+        }
+    },
+    "Header": {
+        "picture": "Pilih gambar Anda",
+        "name": "Nama Anda",
+        "role": "PERAN ANDA"
+    },
+    "AboutMe": {
+        "title": "TENTANG SAYA",
+        "placeholder": "Masukkan ringkasan profesional Anda",
+        "aiAssistant": {
+            "title": "ASISTEN PENULISAN",
+            "h1": "Asisten Penulisan Bertenaga AI",
+            "h2": "Ringkasan",
+            "role": {
+                "title": "Peran",
+                "placeholder": "Masukkan peran Anda"
+            },
+            "level": {
+                "title": "Tingkat Pengalaman",
+                "little": "Sedikit/Tidak ada pengalaman",
+                "some": "Beberapa pengalaman",
+                "lot": "Banyak pengalaman"
+            },
+            "instructions": {
+                "title": "Instruksi (opsional)",
+                "placeholder": "Masukkan detail spesifik yang ingin Anda sertakan (misalnya keterampilan utama, sifat pribadi, fokus industri)"
+            },
+            "generate": "Buat Ringkasan"
+        }
+    },
+    "PersonalDetails": {
+        "title": "DETAIL PRIBADI",
+        "location": "Masukkan Lokasi",
+        "email": "Masukkan Email Anda",
+        "phone": "Masukkan nomor telepon Anda",
+        "web": "Masukkan URL",
+        "linkedin": "Masukkan URL",
+        "custom1": "Kustom",
+        "custom2": "Kustom"
+    },
+    "Experiences": {
+        "title": "PENGALAMAN",
+        "employeer": "Pemberi Kerja",
+        "position": "POSISI",
+        "fromUntil": "Dari - Hingga",
+        "desc": "Masukkan deskripsi pengalaman kerja Anda",
+        "add": "Tambahkan",
+        "remove": "Hapus",
+        "reorder": "Pindahkan",
+        "aiAssistant": {
+            "title": "ASISTEN PENULISAN",
+            "h1": "Asisten Penulisan Bertenaga AI",
+            "h2": "Pengalaman Kerja",
+            "role": {
+                "title": "Peran",
+                "placeholder": "Masukkan peran Anda untuk saran poin-poin"
+            },
+            "generate": "Buat Ringkasan"
+        }
+    },
+    "Educations": {
+        "title": "PENDIDIKAN",
+        "school": "Sekolah",
+        "degree": "GELAR",
+        "fromUntil": "Dari - Hingga",
+        "add": "Tambahkan",
+        "remove": "Hapus",
+        "reorder": "Pindahkan"
+    },
+    "Skills": {
+        "title": "KETERAMPILAN",
+        "placeholder": "Masukkan keterampilan",
+        "add": "Tambahkan",
+        "remove": "Hapus",
+        "reorder": "Susun Ulang",
+        "aiAssistant": {
+            "title": "ASISTEN PENULISAN",
+            "h1": "Asisten Penulisan Bertenaga AI",
+            "h2": "Keterampilan",
+            "role": {
+                "title": "Peran",
+                "placeholder": "Masukkan peran Anda untuk saran keterampilan"
+            },
+            "generate": "Buat Ringkasan"
+        }
+    },
+    "Languages": {
+        "title": "BAHASA",
+        "placeholder": "Masukkan bahasa",
+        "add": "Tambahkan",
+        "remove": "Hapus",
+        "reorder": "Susun Ulang"
+    },
+    "Hobbies": {
+        "title": "HOBI",
+        "placeholder": "Masukkan hobi",
+        "add": "Tambahkan",
+        "remove": "Hapus",
+        "reorder": "Susun Ulang"
+    }
+}

@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Witamy na stronie",
+        "content": "To jest zawartość strony głównej"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Układ",
+            "split": "Układ podzielony",
+            "classic": "Klasyczny układ",
+            "hybrid": "Układ hybrydowy"
+        },
+        "color": {
+            "title": "Kolor"
+        },
+        "typography": {
+            "title": "Typografia",
+            "font": {
+                "title": "Czcionka"
+            },
+            "size": {
+                "title": "Rozmiar",
+                "small": "Mały",
+                "medium": "Średni",
+                "big": "Duży"
+            }
+        },
+        "section": {
+            "title": "Sekcje",
+            "details": {
+                "title": "Dane osobowe",
+                "picture": "Zdjęcie",
+                "location": "Lokalizacja",
+                "aboutMe": "O mnie",
+                "phone": "Numer telefonu",
+                "role": "Rola",
+                "email": "Email",
+                "exp": "Doświadczenie zawodowe",
+                "web": "Strona internetowa",
+                "education": "Edukacja",
+                "linkedin": "LinkedIn",
+                "skills": "Umiejętności",
+                "custom1": "Niestandardowe 1",
+                "custom2": "Niestandardowe 2",
+                "hobbies": "Hobby"
+            },
+            "addCustom": {
+                "title": "Dodaj niestandardową sekcję",
+                "type": {
+                    "select": "Wybierz typ",
+                    "text": "Sekcja tekstowa",
+                    "list": "Sekcja listy"
+                },
+                "placement": {
+                    "select": "Wybierz miejsce",
+                    "top": "Górny obszar",
+                    "bottom": "Dolny obszar",
+                    "left": "Lewa kolumna",
+                    "right": "Prawa kolumna"
+                }
+            }
+        },
+        "import": {
+            "title": "Importuj",
+            "badge": "Nowe"
+        },
+        "download": {
+            "title": "Pobierz"
+        }
+    },
+    "Header": {
+        "picture": "Wybierz swoje zdjęcie",
+        "name": "Twoje imię",
+        "role": "TWOJA ROLA"
+    },
+    "AboutMe": {
+        "title": "O MNIE",
+        "placeholder": "Wprowadź swój profesjonalny opis",
+        "aiAssistant": {
+            "title": "ASYSTENT PISANIA",
+            "h1": "Asystent pisania oparty na AI",
+            "h2": "Podsumowanie",
+            "role": {
+                "title": "Rola",
+                "placeholder": "Wprowadź swoją rolę"
+            },
+            "level": {
+                "title": "Poziom doświadczenia",
+                "little": "Małe/Brak doświadczenia",
+                "some": "Trochę doświadczenia",
+                "lot": "Dużo doświadczenia"
+            },
+            "instructions": {
+                "title": "Instrukcje (opcjonalne)",
+                "placeholder": "Wprowadź szczegóły, które chcesz uwzględnić (np. kluczowe umiejętności, cechy osobiste, branża)"
+            },
+            "generate": "Generuj podsumowanie"
+        }
+    },
+    "PersonalDetails": {
+        "title": "DANE OSOBOWE",
+        "location": "Wprowadź lokalizację",
+        "email": "Wprowadź swój email",
+        "phone": "Wprowadź swój numer telefonu",
+        "web": "Wprowadź URL",
+        "linkedin": "Wprowadź URL",
+        "custom1": "Niestandardowe",
+        "custom2": "Niestandardowe"
+    },
+    "Experiences": {
+        "title": "DOŚWIADCZENIE",
+        "employeer": "Pracodawca",
+        "position": "STANOWISKO",
+        "fromUntil": "Od - Do",
+        "desc": "Wprowadź opis swojego doświadczenia zawodowego",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "reorder": "Zmień kolejność",
+        "aiAssistant": {
+            "title": "ASYSTENT PISANIA",
+            "h1": "Asystent pisania oparty na AI",
+            "h2": "Doświadczenie zawodowe",
+            "role": {
+                "title": "Rola",
+                "placeholder": "Wprowadź swoją rolę dla sugestii punktów"
+            },
+            "generate": "Generuj podsumowanie"
+        }
+    },
+    "Educations": {
+        "title": "EDUKACJA",
+        "school": "Szkoła",
+        "degree": "STOPIEŃ",
+        "fromUntil": "Od - Do",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "reorder": "Zmień kolejność"
+    },
+    "Skills": {
+        "title": "UMIEJĘTNOŚCI",
+        "placeholder": "Wprowadź umiejętność",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "reorder": "Zmień kolejność",
+        "aiAssistant": {
+            "title": "ASYSTENT PISANIA",
+            "h1": "Asystent pisania oparty na AI",
+            "h2": "Umiejętności",
+            "role": {
+                "title": "Rola",
+                "placeholder": "Wprowadź swoją rolę dla sugestii umiejętności"
+            },
+            "generate": "Generuj podsumowanie"
+        }
+    },
+    "Languages": {
+        "title": "JĘZYKI",
+        "placeholder": "Wprowadź język",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "reorder": "Zmień kolejność"
+    },
+    "Hobbies": {
+        "title": "HOBBY",
+        "placeholder": "Wprowadź hobby",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "reorder": "Zmień kolejność"
+    }
+}

@@ -1,0 +1,170 @@
+{
+    "Homepage": {
+        "title": "Bienvenue sur la page",
+        "content": "Ceci est le contenu de la page d'accueil"
+    },
+    "Navbar": {
+        "layout": {
+            "title": "Disposition",
+            "split": "Disposition divisée",
+            "classic": "Disposition classique",
+            "hybrid": "Disposition hybride"
+        },
+        "color": {
+            "title": "Couleur"
+        },
+        "typography": {
+            "title": "Typographie",
+            "font": {
+                "title": "Police"
+            },
+            "size": {
+                "title": "Taille",
+                "small": "Petit",
+                "medium": "Moyen",
+                "big": "Grand"
+            }
+        },
+        "section": {
+            "title": "Sections",
+            "details": {
+                "title": "Détails personnels",
+                "picture": "Photo",
+                "location": "Emplacement",
+                "aboutMe": "À propos de moi",
+                "phone": "Numéro de téléphone",
+                "role": "Rôle",
+                "email": "E-mail",
+                "exp": "Expérience professionnelle",
+                "web": "Site web",
+                "education": "Éducation",
+                "linkedin": "LinkedIn",
+                "skills": "Compétences",
+                "custom1": "Personnalisé 1",
+                "custom2": "Personnalisé 2",
+                "hobbies": "Loisirs"
+            },
+            "addCustom": {
+                "title": "Ajouter une section personnalisée",
+                "type": {
+                    "select": "Sélectionner le type",
+                    "text": "Section texte",
+                    "list": "Section liste"
+                },
+                "placement": {
+                    "select": "Sélectionner l'emplacement",
+                    "top": "Zone supérieure",
+                    "bottom": "Zone inférieure",
+                    "left": "Colonne gauche",
+                    "right": "Colonne droite"
+                }
+            }
+        },
+        "import": {
+            "title": "Importer",
+            "badge": "Nouveau"
+        },
+        "download": {
+            "title": "Télécharger"
+        }
+    },
+    "Header": {
+        "picture": "Sélectionnez votre photo",
+        "name": "Votre nom",
+        "role": "VOTRE RÔLE"
+    },
+    "AboutMe": {
+        "title": "À PROPOS DE MOI",
+        "placeholder": "Entrez votre résumé professionnel",
+        "aiAssistant": {
+            "title": "ASSISTANT D'ÉCRITURE",
+            "h1": "Assistant d'écriture alimenté par l'IA",
+            "h2": "Résumé",
+            "role": {
+                "title": "Rôle",
+                "placeholder": "Entrez votre rôle"
+            },
+            "level": {
+                "title": "Niveau d'expérience",
+                "little": "Peu/pas d'expérience",
+                "some": "Un peu d'expérience",
+                "lot": "Beaucoup d'expérience"
+            },
+            "instructions": {
+                "title": "Instructions (facultatif)",
+                "placeholder": "Entrez les détails spécifiques que vous souhaitez inclure (par exemple, compétences clés, traits personnels, secteur d'activité)"
+            },
+            "generate": "Générer un résumé"
+        }
+    },
+    "PersonalDetails": {
+        "title": "DÉTAILS PERSONNELS",
+        "location": "Entrez l'emplacement",
+        "email": "Entrez votre e-mail",
+        "phone": "Entrez votre numéro de téléphone",
+        "web": "Entrez l'URL",
+        "linkedin": "Entrez l'URL",
+        "custom1": "Personnalisé",
+        "custom2": "Personnalisé"
+    },
+    "Experiences": {
+        "title": "EXPÉRIENCE",
+        "employeer": "Employeur",
+        "position": "POSTE",
+        "fromUntil": "De - À",
+        "desc": "Entrez la description de votre expérience professionnelle",
+        "add": "Ajouter",
+        "remove": "Supprimer",
+        "reorder": "Réorganiser",
+        "aiAssistant": {
+            "title": "ASSISTANT D'ÉCRITURE",
+            "h1": "Assistant d'écriture alimenté par l'IA",
+            "h2": "Expérience professionnelle",
+            "role": {
+                "title": "Rôle",
+                "placeholder": "Entrez votre rôle pour des suggestions de points clés"
+            },
+            "generate": "Générer un résumé"
+        }
+    },
+    "Educations": {
+        "title": "ÉDUCATION",
+        "school": "École",
+        "degree": "DIPLÔME",
+        "fromUntil": "De - À",
+        "add": "Ajouter",
+        "remove": "Supprimer",
+        "reorder": "Réorganiser"
+    },
+    "Skills": {
+        "title": "COMPÉTENCES",
+        "placeholder": "Entrez une compétence",
+        "add": "Ajouter",
+        "remove": "Supprimer",
+        "reorder": "Réorganiser",
+        "aiAssistant": {
+            "title": "ASSISTANT D'ÉCRITURE",
+            "h1": "Assistant d'écriture alimenté par l'IA",
+            "h2": "Compétences",
+            "role": {
+                "title": "Rôle",
+                "placeholder": "Entrez votre rôle pour des suggestions de compétences"
+            },
+            "generate": "Générer un résumé"
+        }
+    },
+    "Languages": {
+        "title": "LANGUES",
+        "placeholder": "Entrez une langue",
+        "add": "Ajouter",
+        "remove": "Supprimer",
+        "reorder": "Réorganiser"
+    },
+    "Hobbies": {
+        "title": "LOISIRS",
+        "placeholder": "Entrez un loisir",
+        "add": "Ajouter",
+        "remove": "Supprimer",
+        "reorder": "Réorganiser"
+    }
+}

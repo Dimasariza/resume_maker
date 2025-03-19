@@ -1,33 +1,30 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLayout } from "@/lib/features/switchLayout";
+import { useTranslations } from "next-intl";
 
 export function NavBarLayout() {
-    const { layout } = useSelector((state) => state.SwitchLayout);
-    
-
+    const t = useTranslations('Navbar.layout');
+    const { activeLayout } = useSelector((state) => state.SwitchLayout);
     const dispatch = useDispatch();
-    const handleLayout = (layout) => {
-        dispatch(setLayout(layout.name));
-    }
 
     const allLayout = [ 
-        { name : "Split Layout" },
-        { name : "Classic Layout" },
-        { name : "Hybrid Layout" },
+        { name : t("split"), layout: 'split' },
+        { name : t("classic"), layout: 'classic' },
+        { name : t("hybrid"), layout: 'hybrid' },
     ];
 
     return (
         <div className="flex join justify-center">
             {
-                allLayout.map((item, index) => (
+                allLayout.map(({name, layout}) => (
                     <input 
-                        onChange={() => handleLayout(item)} 
-                        key={index} 
+                        onChange={() => dispatch(setLayout(layout))} 
+                        key={layout} 
                         className="join-item btn" 
                         type="radio" 
-                        name="options" 
-                        aria-label={item.name} 
-                        checked={layout == item.name}
+                        name="layout" 
+                        aria-label={name} 
+                        checked={layout == activeLayout}
                     />
                 ))
             }
