@@ -9,16 +9,16 @@ export function NavBarTypography() {
     const dispatch = useDispatch();
 
     const typography = [
-        { name: "Nunito" },
-        { name: "Archivo Narrow" },
-        { name: "Syne" },
-        { name: "DM Serif Display + DM Sans" },
-        { name: "Poppins" },
-        { name: "Rubik" },
-        { name: "Fira Sans" },
-        { name: "Josefin Sans" },
-        { name: "Roboto mono" },
-        { name: "Fjalla One + Inter" },
+        { class: "nunito", name: "Nunito" },
+        { class: "archivo_narrow", name: "Archivo Narrow" },
+        { class: "syne", name: "Syne" },
+        { class: "dm_serif_display-dm_sans", name: "DM Serif Display + DM Sans" },
+        { class: "poppins", name: "Poppins" },
+        { class: "rubik", name: "Rubik" },
+        { class: "fira_sans", name: "Fira Sans" },
+        { class: "josefin_sans", name: "Josefin Sans" },
+        { class: "roboto_mono", name: "Roboto mono" },
+        { class: "fjalla_one-inter", name: "Fjalla One + Inter" },
     ]
 
     const typographySize = [
@@ -38,11 +38,15 @@ export function NavBarTypography() {
         <div className="flex flex-col gap-2">
             <label htmlFor="">{t("font.title")}</label>
             <div className="dropdown dropdown-center w-full">
-                <div tabIndex={1} role="button" className="btn w-full capitalize">{font}</div>
+                <div tabIndex={1} role="button" className="btn w-full capitalize">
+                    { typography.find(item => item.class == font).name }
+                </div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                     {
                         typography.map((item, index) => (
-                            <li key={index} onClick={()=>handleClickFont(item.name)} ><a>{item.name}</a></li>
+                            <li key={index} onClick={()=>handleClickFont(item.class)} >
+                                <a>{item.name}</a>
+                            </li>
                         ))
                     }
                 </ul>

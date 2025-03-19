@@ -20,6 +20,19 @@ export default function Header({pictureClassName, identityClassName, section}) {
         }
     }
 
+    const { font } = useSelector((state) => state.SwitchTypography);
+
+    const getFont = () => {
+      switch(font) {
+        case 'dm_serif_display-dm_sans':
+          return 'dm_serif_display'
+        case 'fjalla_one-inter':
+          return 'fjalla_one'
+        default:
+          return font
+      }
+    }
+
     return (
         <>
             {
@@ -48,7 +61,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
                     placeholder={t("name")} 
                     value={name} 
                     onChange={(e)=> dispatch(setName(e.target.value))} 
-                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-4xl font-bold" 
+                    className={`hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-4xl font-bold text-primary ${getFont()}`} 
                     autoComplete="off"
                 />
                 {
@@ -58,7 +71,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
                         placeholder={t("role")} 
                         value={role} 
                         onChange={(e)=> dispatch(setRole(e.target.value))} 
-                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
                         autoComplete="off"
                     />
                 }

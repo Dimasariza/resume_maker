@@ -21,7 +21,7 @@ export function NavBar(params) {
     ]
 
     return (
-        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 sm:py-0 dark:bg-neutral-900">
+        <header className="nunito flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 sm:py-0 dark:bg-neutral-900">
             <nav className="w-full mx-auto px-4 md:px-6 lg:px-8 flex justify-between navbar bg-base-100 shadow-sm">
                 <div className="flex">
                     <img src="./logo.svg" alt="Logo" />
@@ -49,10 +49,10 @@ export function NavBar(params) {
                         {t("import.title")}
                         <div className="badge badge-info text-white">{t("import.badge")}<PiStarFourFill/></div>
                     </button>
-                    <button className="btn btn-active btn-warning">
+                    <label htmlFor="download_content" className="btn  btn-warning">
                         <BsDownload />
                         {t("download.title")}
-                    </button>
+                    </label>
                 </div>
             </nav>
         </header>

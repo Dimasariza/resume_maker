@@ -15,7 +15,7 @@ function SplitLayout(props) {
 
     const reorderComponent = (comp1, comp2, comp3, comp4) => (
         <>
-            <GoDotFill />   
+            <GoDotFill className="place-self-center text-primary"/>   
             { comp1 }
             <div className="col-start-2 col-span-2 flex">
                 { comp2 }
@@ -28,10 +28,10 @@ function SplitLayout(props) {
     )
 
     return (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-[28%_72%] gap-5">
             <Header pictureClassName="justify-start" section={section} />
 
-            <div>
+            <div className="">
                 {section["About Me"] && <AboutMe />}
                 <PersonalDetails detailClassname="flex-col justify-center gap-2"/>
             </div>

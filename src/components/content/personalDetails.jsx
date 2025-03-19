@@ -59,7 +59,7 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
                     placeholder={t("title")} 
                     value={personalTitle} 
                     onChange={(e)=>dispatch(setPersonalTitle(e.target.value))} 
-                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
                     autoComplete="off"
                 />
             }
@@ -68,13 +68,15 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
                 personalDetails.map(({placeholder, icon, name, toggle}, index) => (
                     section[toggle] &&
                     <div className="flex items-center gap-2" key={index}>
-                        {icon}
+                        <span className="text-primary">
+                            {icon}
+                        </span>
                         <input 
                             type="text" 
                             placeholder={placeholder} 
                             value={eval(name)} 
                             onChange={(e)=>handleOnChangeValue(name, e.target.value)} 
-                            className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold field-sizing-content" 
+                            className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 field-sizing-content" 
                             autoComplete="off"
                         />
                     </div>

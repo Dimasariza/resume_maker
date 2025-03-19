@@ -22,7 +22,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                 placeholder={t("title")}
                 value={title} 
                 onChange={(e)=>dispatch(setExpTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -65,7 +65,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         placeholder={t("employeer")} 
                                         value={employeer} 
                                         onChange={(e)=>dispatch(setEmployeer({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2" 
+                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2 text-primary" 
                                         autoComplete="off"
                                     />,
                                     <input 
@@ -84,7 +84,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         placeholder={t("fromUntil")}
                                         value={fromUntil} 
                                         onChange={(e)=>dispatch(setExpFromUntil({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold field-sizing-content" 
+                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 field-sizing-content" 
                                         autoComplete="off"
                                     />,
                                     <input 
@@ -92,7 +92,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         placeholder={t("desc")} 
                                         value={description} 
                                         onChange={(e)=>dispatch(setDescription({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold w-full" 
+                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 w-full" 
                                         autoComplete="off"
                                     />
                                 )

@@ -1,92 +1,22 @@
+
 import { 
-  Nunito, 
-  Archivo_Narrow, 
-  Syne, 
-  DM_Serif_Display, 
-  DM_Sans, 
-  Poppins, 
-  Rubik, 
-  Fira_Sans, 
-  Josefin_Sans, 
-  Roboto_Mono, 
-  Fjalla_One, Inter 
-} from "next/font/google";
+  archivo_narrow, 
+  dm_sans, 
+  dm_serif_display, 
+  fira_sans, 
+  fjalla_one, 
+  inter, 
+  josefin_sans, 
+  nunito, 
+  poppins, 
+  roboto_mono, 
+  rubik, 
+  syne 
+} from "@/utils/font";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
-
-const nunito = Nunito({
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const archivo_narrow = Archivo_Narrow({
-  // weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const syne = Syne({
-  // weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const dm_serif_display = DM_Serif_Display({
-  weight: '400',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const dm_sans = DM_Sans({
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({ 
-  weight: '100',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const rubik = Rubik({
-  weight: '300',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const fira_sans = Fira_Sans({
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const josefin_sans = Josefin_Sans({ 
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const roboto_mono = Roboto_Mono({
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const fjalla_one = Fjalla_One({
-  weight: '400',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  weight: '200',
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Resume Maker",
@@ -98,8 +28,20 @@ export default async function RootLayout({ children }) {
   const locale = await getLocale();
   return (
     <html lang={locale} data-theme="light">
-        <body
-          className={`${nunito.variable} antialiased`}
+        <body className={`antialiased 
+          ${nunito} 
+          ${archivo_narrow}
+          ${syne} 
+          ${dm_serif_display}
+          ${dm_sans} 
+          ${poppins}
+          ${rubik}
+          ${fira_sans}
+          ${josefin_sans}
+          ${roboto_mono}
+          ${fjalla_one}
+          ${inter}
+        `}
           >
           <NextIntlClientProvider messages={messages}>
             <StoreProvider>

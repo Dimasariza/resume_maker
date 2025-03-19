@@ -13,7 +13,7 @@ export function HybridLayout() {
     const section = useSelector((state) => state.SwitchSection);
     const reorderComponent = (comp1, comp2, comp3, comp4) => {
         return <>
-            <GoDotFill />   
+            <GoDotFill className="place-self-center text-primary"/>   
             { comp3 }
             <div className="col-start-3 flex">
                 { comp2 }

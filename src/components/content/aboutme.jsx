@@ -17,7 +17,7 @@ export default function AboutMe({viewTitle = true}) {
 
     return (
         <div 
-            className={`justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
+            className={`text-text-color-primary justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
             onMouseEnter={()=>setViewButton(true)} 
             onMouseLeave={()=>setViewButton(false)}
         >
@@ -38,7 +38,7 @@ export default function AboutMe({viewTitle = true}) {
                     placeholder={t("title")} 
                     value={name} 
                     onChange={(e)=> dispatch(setSummaryTitle(e.target.value))} 
-                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-2xl font-bold w-full" 
+                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold w-full" 
                     autoComplete="off"
                 />
             }
@@ -48,7 +48,7 @@ export default function AboutMe({viewTitle = true}) {
                 placeholder={t("placeholder")} 
                 value={role} 
                 onChange={(e)=> dispatch(setDescription(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold w-full" 
+                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 w-full" 
                 autoComplete="off"
             />
         </div>

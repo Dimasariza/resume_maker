@@ -16,7 +16,7 @@ export function ClassicLayout() {
 
     const reorderComponent = (comp1, comp2, comp3, comp4) => {
         return <>
-            <GoDotFill />   
+            <GoDotFill className="place-self-center text-primary" />   
             { comp1 }
             <div className="col-start-2 col-span-2 flex">
                 { comp2 }

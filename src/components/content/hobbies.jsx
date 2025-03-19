@@ -51,7 +51,7 @@ export default function Hobbies() {
                 placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setHobbiesTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -95,7 +95,7 @@ export default function Hobbies() {
                                     placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setHobbie({index: item.id, value: e.target.value}))} 
-                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0" 
                                     autoComplete="off"
                                 />
                             </div> 

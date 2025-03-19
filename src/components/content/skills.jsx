@@ -60,7 +60,7 @@ export default function Skills() {
                 placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setSkillTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -104,7 +104,7 @@ export default function Skills() {
                                     placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setSkill({index: item.id, value: e.target.value}))} 
-                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold" 
+                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0" 
                                     autoComplete="off"
                                 />
                             </div> 

@@ -12,6 +12,7 @@ export function Content (params) {
     const printRef = useRef(null);
 
     const handleDownloadPDF = async () => {
+        console.log("Print PDF")
         const element = printRef.current
 
         if(!element) return;
@@ -48,9 +49,9 @@ export function Content (params) {
     }
 
     return (
-        <section ref={printRef} className="flex h-full min-h-screen bg-title  w-4/5 mt-3">
-            <div className="text-black w-full p-10 bg-white">
-                {/* <button onClick={handleDownloadPDF}>Print PDF</button> */}
+        <section ref={printRef} className="flex h-full min-h-screen bg-title w-4xl mt-5">
+            <div className="text-black w-full p-15 bg-white">
+                <input type="checkbox" id="download_content" className="invisible" onChange={()=>handleDownloadPDF()} />
                 { getActiveLayout() }
             </div>
         </section>
