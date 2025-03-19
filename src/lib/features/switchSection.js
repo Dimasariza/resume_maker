@@ -3,22 +3,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    "Picture": true,
-    "Location": true,
-    "About Me": true,
-    "Phone Number": true,
-    "Role": true,
-    "Email": true,
-    "Work Experience": true,
-    "Website": true,
-    "Education": true,
-    "LinkedIn": false,
-    "Skills": true,
-    "Custom 1": false,
-    "Languages": false,
-    "Custom 2": false,
-    "Hobbies": false,
-    "Custom": [ ]
+  picture: true,
+  location: true,
+  aboutMe: true,
+  phone: true,
+  role: true,
+  email: true,
+  exp: true,
+  web: true,
+  education: true,
+  linkedIn: false,
+  skills: true,
+  custom1: false,
+  language: false,
+  custom2: false,
+  hobbies: false,
+  Custom: [ ]
 }
 
 export const switchSection = createSlice({ 

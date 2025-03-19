@@ -34,7 +34,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                 placeholder={t("title")}
                 value={title} 
                 onChange={(e)=> dispatch(setEduTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -81,7 +81,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         placeholder={t("school")} 
                                         value={school} 
                                         onChange={(e)=>dispatch(setSchool({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2 text-primary" 
+                                        className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold col-span-2 text-primary" 
                                         autoComplete="off"
                                     />,
                                     <input 
@@ -90,7 +90,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         value={degree} 
                                         onChange={(e)=>dispatch(setDegree({index, value: e.target.value}))} 
                                         className={
-                                            `hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold 
+                                            `hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold 
                                             ${fitDegree && "field-sizing-content"}`
                                         } 
                                         autoComplete="off"
@@ -100,7 +100,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         placeholder={t("fromUntil")} 
                                         value={fromUntil} 
                                         onChange={(e)=>dispatch(setEduFromUntil({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 field-sizing-content" 
+                                        className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content" 
                                         autoComplete="off"
                                     />
                                 )

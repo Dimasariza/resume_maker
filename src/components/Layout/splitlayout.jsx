@@ -17,7 +17,7 @@ function SplitLayout(props) {
         <>
             <GoDotFill className="place-self-center text-primary"/>   
             { comp1 }
-            <div className="col-start-2 col-span-2 flex">
+            <div className="col-start-2 col-span-2 flex justify-between">
                 { comp2 }
                 { comp3 }
             </div>
@@ -31,17 +31,17 @@ function SplitLayout(props) {
         <div className="grid grid-cols-[28%_72%] gap-5">
             <Header pictureClassName="justify-start" section={section} />
 
-            <div className="">
-                {section["About Me"] && <AboutMe />}
-                <PersonalDetails detailClassname="flex-col justify-center gap-2"/>
+            <div>
+                {section.aboutMe && <AboutMe />}
+                <PersonalDetails detailClassname="flex-col justify-center"/>
             </div>
 
-            <div>
-                {section["Work Experience"] && <Experience reorderComponent={reorderComponent} />}
-                {section["Education"] && <Education reorderComponent={reorderComponent} />}
-                {section["Skills"] && <Skills />}
-                {section["Languages"] && <Languages />}
-                {section["Hobbies"] && <Hobbies />}
+            <div className="flex flex-col gap-y-5">
+                {section.exp && <Experience reorderComponent={reorderComponent} />}
+                {section.education && <Education reorderComponent={reorderComponent} />}
+                {section.skills && <Skills />}
+                {section.language && <Languages />}
+                {section.hobbies && <Hobbies />}
             </div>
         </div>
     )

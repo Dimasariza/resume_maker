@@ -1,4 +1,4 @@
-import { setEmail, setLocation, setPhone, setURL, setPersonalTitle, setLinkedIn, setCustom1, setCustom2 } from "@/lib/features/personalDetails";
+import { setEmail, setLocation, setPhone, setURL, setPersonalTitle, setLinkedIn, setCustom1, setCustom2, setPersonalDetials } from "@/lib/features/personalDetails";
 import { useTranslations } from "next-intl";
 import { AiOutlineLink } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -10,73 +10,48 @@ import { useDispatch, useSelector } from "react-redux";
 export default function PersonalDetails({viewTitle = true, detailClassname}) {
     const t = useTranslations('PersonalDetails');
     
-    const { location, email, phone, url, personalTitle, linkedIn, custom1, custom2 } = useSelector((state) => state.PersonalDetails);
+    const details = useSelector((state) => state.PersonalDetails);
     const section = useSelector((state) => state.SwitchSection);
 
     const dispatch = useDispatch();
     
-    const handleOnChangeValue = (name, value) => {
-        switch(name) {
-            case 'location':
-                dispatch(setLocation(value))
-            break;
-            case 'email':
-                dispatch(setEmail(value))
-            break;
-            case 'phone':
-                dispatch(setPhone(value))
-            break
-            case 'url':
-                dispatch(setURL(value))
-            break;
-            case 'linkedIn':
-                dispatch(setLinkedIn(value))
-            break;
-            case 'custom1':
-                dispatch(setCustom1(value))
-            break;
-            case 'custom2':
-                dispatch(setCustom2(value))
-        }
-    }
-
     const personalDetails = [
-        { placeholder: t("location"), name: "location", toggle: "Location", icon: <FaLocationDot /> },
-        { placeholder: t("email"), name: "email", toggle: "Email", icon: <MdEmail /> },
-        { placeholder: t("phone"), name: "phone", toggle: "Phone Number", icon: <FaPhone /> },
-        { placeholder: t("web"), name: "url", toggle: "Website", icon: <AiOutlineLink /> },
-        { placeholder: t("linkedIn"), name: "linkedIn", toggle: "LinkedIn", icon: <FaLinkedinIn /> },
-        { placeholder: t("custom1"), name: "custom1", toggle: "Custom 1", icon: <GoDotFill /> },
-        { placeholder: t("custom2"), name: "custom2", toggle: "Custom 2", icon: <GoDotFill /> },
+        { name: "location", icon: <FaLocationDot /> },
+        { name: "email", icon: <MdEmail /> },
+        { name: "phone", icon: <FaPhone /> },
+        { name: "web", icon: <AiOutlineLink /> },
+        { name: "linkedIn", icon: <FaLinkedinIn /> },
+        { name: "custom1", icon: <GoDotFill /> },
+        { name: "custom2", icon: <GoDotFill /> },
     ]
 
     return (
-        <div className={`flex mt-5 ${detailClassname}`}>
+        <div className={`flex mt-5 flex-wrap gap-3 ${detailClassname}`}>
             {
                 viewTitle &&
                 <input 
                     type="text" 
                     placeholder={t("title")} 
-                    value={personalTitle} 
+                    value={details.personalTitle} 
                     onChange={(e)=>dispatch(setPersonalTitle(e.target.value))} 
-                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                    className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                     autoComplete="off"
                 />
             }
 
             {
-                personalDetails.map(({placeholder, icon, name, toggle}, index) => (
-                    section[toggle] &&
+                personalDetails.map(({icon, name}, index) => (
+                    section[name] &&
                     <div className="flex items-center gap-2" key={index}>
                         <span className="text-primary">
                             {icon}
                         </span>
                         <input 
                             type="text" 
-                            placeholder={placeholder} 
-                            value={eval(name)} 
-                            onChange={(e)=>handleOnChangeValue(name, e.target.value)} 
-                            className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 field-sizing-content" 
+                            placeholder={t(name)} 
+                            value={details[name]} 
+                            onChange={(e)=>dispatch(setPersonalDetials({key: name, value: e.target.value}))} 
+                            className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content" 
                             autoComplete="off"
                         />
                     </div>

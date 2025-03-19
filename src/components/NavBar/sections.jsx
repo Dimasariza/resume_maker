@@ -34,7 +34,7 @@ export function NavBarSections() {
         { id: "linkedIn", name : "LinkedIn" },
         { id: "skills", name : "Skills" },
         { id: "custom1", name : "Custom 1" },
-        { id: "languages", name : "Languages" },
+        { id: "language", name : "Languages" },
         { id: "custom2", name : "Custom 2" },
         { id: "hobbies", name : "Hobbies" },
     ]
@@ -47,8 +47,8 @@ export function NavBarSections() {
                     toggle.map((item, index) => (
                         <label className="fieldset-label" key={index}>
                             <input type="checkbox" 
-                                checked={section[item.name]} 
-                                onChange={()=>dispatch(switchToggle(item.name))} 
+                                checked={section[item.id]} 
+                                onChange={()=>dispatch(switchToggle(item.id))} 
                                 className="toggle toggle-xs toggle-primary" 
                             />
                             { item.name }

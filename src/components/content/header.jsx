@@ -36,7 +36,7 @@ export default function Header({pictureClassName, identityClassName, section}) {
     return (
         <>
             {
-                section['Picture'] &&
+                section.picture &&
                 <div className={`flex ${pictureClassName}`}>
                     <label 
                         htmlFor="profile-upload" 
@@ -61,17 +61,17 @@ export default function Header({pictureClassName, identityClassName, section}) {
                     placeholder={t("name")} 
                     value={name} 
                     onChange={(e)=> dispatch(setName(e.target.value))} 
-                    className={`hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 text-4xl font-bold text-primary ${getFont()}`} 
+                    className={`hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 text-4xl font-bold text-primary ${getFont()}`} 
                     autoComplete="off"
                 />
                 {
-                    section["Role"] &&
+                    section.role &&
                     <input 
                         type="text" 
                         placeholder={t("role")} 
                         value={role} 
                         onChange={(e)=> dispatch(setRole(e.target.value))} 
-                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                        className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                         autoComplete="off"
                     />
                 }

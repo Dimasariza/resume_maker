@@ -43,7 +43,7 @@ export default function Languages() {
     return (
         <div 
             ref={containerRef}
-            className={`justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
+            className={`justify-center relative rounded-md`} 
             onMouseEnter={()=>setViewButton(prev => ({...prev, assitant: true}))} 
             onMouseLeave={()=>setViewButton(prev => ({...prev, assitant: false}))}
         >         
@@ -52,7 +52,7 @@ export default function Languages() {
                 placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setLanguagesTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -96,7 +96,7 @@ export default function Languages() {
                                     placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setLanguage({index: item.id, value: e.target.value}))} 
-                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0" 
+                                    className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0" 
                                     autoComplete="off"
                                 />
                             </div> 

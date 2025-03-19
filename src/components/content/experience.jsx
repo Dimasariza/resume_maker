@@ -22,7 +22,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                 placeholder={t("title")}
                 value={title} 
                 onChange={(e)=>dispatch(setExpTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -65,7 +65,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         placeholder={t("employeer")} 
                                         value={employeer} 
                                         onChange={(e)=>dispatch(setEmployeer({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-span-2 text-primary" 
+                                        className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold col-span-2 text-primary" 
                                         autoComplete="off"
                                     />,
                                     <input 
@@ -74,7 +74,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         value={position} 
                                         onChange={(e)=>dispatch(setPosition({index, value: e.target.value}))} 
                                         className={
-                                            `hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-bold col-start-2 
+                                            `hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold col-start-2 
                                             ${fitPosition && "field-sizing-content"}`
                                         } 
                                         autoComplete="off"
@@ -84,17 +84,17 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         placeholder={t("fromUntil")}
                                         value={fromUntil} 
                                         onChange={(e)=>dispatch(setExpFromUntil({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 field-sizing-content" 
+                                        className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content" 
                                         autoComplete="off"
                                     />,
-                                    <input 
-                                        type="text" 
+                                    <textarea 
                                         placeholder={t("desc")} 
+                                        autoComplete="off"
                                         value={description} 
                                         onChange={(e)=>dispatch(setDescription({index, value: e.target.value}))} 
-                                        className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 w-full" 
-                                        autoComplete="off"
-                                    />
+                                        wrap="soft" 
+                                        className="p-1 textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none w-full" 
+                                    ></textarea>
                                 )
                             }
 

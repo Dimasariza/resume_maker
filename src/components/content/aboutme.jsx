@@ -38,19 +38,19 @@ export default function AboutMe({viewTitle = true}) {
                     placeholder={t("title")} 
                     value={name} 
                     onChange={(e)=> dispatch(setSummaryTitle(e.target.value))} 
-                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold w-full" 
+                    className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold w-full" 
                     autoComplete="off"
                 />
             }
 
-            <input 
-                type="text" 
+            <textarea 
+                autoComplete="off"
                 placeholder={t("placeholder")} 
                 value={role} 
                 onChange={(e)=> dispatch(setDescription(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 w-full" 
-                autoComplete="off"
-            />
+                wrap="soft" 
+                className="p-1 textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none" 
+            ></textarea>
         </div>
     )
 }

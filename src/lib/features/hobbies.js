@@ -6,8 +6,8 @@ import { reconstructData } from "../helper";
 const initialState = {
   title: '',
   listOfHobbies: [
-    { id: '0', title: '1' },
-    { id: '1', title: '2' },
+    { id: '0', title: '' },
+    // { id: '1', title: '2' },
     // { id: '2', title: '3' },
   ]
 };

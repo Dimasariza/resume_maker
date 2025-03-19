@@ -27,17 +27,19 @@ export function HybridLayout() {
     }
     return (
         <>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 mb-3">
                 <Header pictureClassName="justify-end order-2" identityClassName="order-1" section={section}/>
             </div>
 
-            {section["About Me"]  && <AboutMe viewTitle={false} />}
-            <PersonalDetails viewTitle={false} detailClassname="gap-5" />
-            {section["Work Experience"] && <Experience reorderComponent={reorderComponent} fitPosition={true} />}
-            {section["Education"] && <Education reorderComponent={reorderComponent} fitDegree={true}/>}
-            {section["Skills"] && <Skills />}
-            {section["Languages"] && <Languages />}
-            {section["Hobbies"] && <Hobbies />}
+            <div className="flex flex-col gap-2">
+                {section.aboutMe  && <AboutMe viewTitle={false} />}
+                <PersonalDetails viewTitle={false} />
+                {section.exp && <Experience reorderComponent={reorderComponent} fitPosition={true} />}
+                {section.education && <Education reorderComponent={reorderComponent} fitDegree={true}/>}
+                {section.skills && <Skills />}
+                {section.language && <Languages />}
+                {section.hobbies && <Hobbies />}
+            </div>
         </>
     )
 }

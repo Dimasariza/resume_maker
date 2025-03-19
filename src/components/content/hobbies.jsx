@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createSwapy, utils } from "swapy";
 import { useDispatch, useSelector } from "react-redux";
 import { addHobbie, setHobbie, setHobbiesTitle } from "@/lib/features/hobbies";
+import { useTranslations } from "next-intl";
 
 export default function Hobbies() {
     const t = useTranslations('Hobbies');
@@ -42,7 +43,7 @@ export default function Hobbies() {
     return (
         <div 
             ref={containerRef}
-            className={`justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
+            className={`justify-center relative rounded-md`} 
             onMouseEnter={()=>setViewButton(prev => ({...prev, assitant: true}))} 
             onMouseLeave={()=>setViewButton(prev => ({...prev, assitant: false}))}
         >         
@@ -51,7 +52,7 @@ export default function Hobbies() {
                 placeholder={t("title")} 
                 value={title} 
                 onChange={(e)=>dispatch(setHobbiesTitle(e.target.value))} 
-                className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0 font-extrabold" 
+                className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-extrabold" 
                 autoComplete="off"
             />
 
@@ -95,7 +96,7 @@ export default function Hobbies() {
                                     placeholder={t("placeholder")} 
                                     value={item.title} 
                                     onChange={(e)=>dispatch(setHobbie({index: item.id, value: e.target.value}))} 
-                                    className="hover:bg-gray-200 focus:bg-gray-500 focus:outline-0" 
+                                    className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0" 
                                     autoComplete="off"
                                 />
                             </div> 

@@ -7,7 +7,7 @@ const initialState = {
     location: '',
     email: '',
     phone: '',
-    url: '',
+    web: '',
     linkedIn: '',
     custom1: '',
     custom2: ''
@@ -17,6 +17,9 @@ export const personalDetails = createSlice({
   name: 'personalDetails',
   initialState,
   reducers: {
+    setPersonalDetials(state, action) {
+        state[action.payload.key] = action.payload.value
+    },
     setPersonalTitle(state, action) {
         state.personalTitle = action.payload;    
     },
@@ -52,7 +55,8 @@ export const {
     setPersonalTitle,
     setLinkedIn,
     setCustom1,
-    setCustom2 
+    setCustom2,
+    setPersonalDetials
 } = personalDetails.actions;
 
 export default personalDetails.reducer;
