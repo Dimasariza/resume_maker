@@ -95,7 +95,8 @@
                 "title": "Instruksjoner (valgfritt)",
                 "placeholder": "Skriv inn spesifikke detaljer du vil inkludere (f.eks. nøkkelferdigheter, personlige egenskaper, bransjefokus)"
             },
-            "generate": "Generer oppsummering"
+            "generate": "Generer oppsummering",
+            "useSummary": "Bruk oppsummering"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rolle",
                 "placeholder": "Skriv inn din rolle for forslag til punktlister"
             },
-            "generate": "Generer oppsummering"
+            "generate": "Generer oppsummering",
+            "useExp": "Bruk punktlister"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rolle",
                 "placeholder": "Skriv inn din rolle for forslag til ferdigheter"
             },
-            "generate": "Generer oppsummering"
+            "generate": "Generer oppsummering",
+            "useSkills": "Bruk ferdigheter"
         }
     },
     "Languages": {

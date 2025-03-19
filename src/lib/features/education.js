@@ -7,9 +7,10 @@ const initialState = {
   title: '',
   listOfEducations: [
     { 
-        school: '',
-        degree: '',
-        fromUntil: '',
+      id: '0000',
+      school: '',
+      degree: '',
+      fromUntil: '',
     }
   ]
 };
@@ -31,7 +32,10 @@ export const educations = createSlice({
         state.listOfEducations = reconstructData(state.listOfEducations, action, "fromUntil") 
     },
     addEducation(state, action) {
-        state.listOfEducations = [...state.listOfEducations, initialState.listOfEducations[0]]
+        const newEducation = {...initialState.listOfEducations[0], 
+          id: Date.now().toString(36) + Math.random().toString(36).substring(2, 6)
+        }
+        state.listOfEducations = [...state.listOfEducations, newEducation]
     },
   }
 });

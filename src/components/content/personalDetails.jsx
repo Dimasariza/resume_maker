@@ -57,6 +57,7 @@ export default function PersonalDetails({viewTitle = true, detailClassname}) {
                     </div>
                 ))
             }
+            <div className="size-10 transparent"></div>
         </div>
     )
 } 

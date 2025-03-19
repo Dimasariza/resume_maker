@@ -95,7 +95,8 @@
                 "title": "Anweisungen (optional)",
                 "placeholder": "Geben Sie spezifische Details ein, die Sie einfügen möchten (z. B. Schlüsselqualifikationen, persönliche Eigenschaften, Branchenfokus)"
             },
-            "generate": "Zusammenfassung generieren"
+            "generate": "Zusammenfassung generieren",
+            "useSummary": "Zusammenfassung verwenden"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rolle",
                 "placeholder": "Geben Sie Ihre Rolle für Vorschläge zu Aufzählungspunkten ein"
             },
-            "generate": "Zusammenfassung generieren"
+            "generate": "Zusammenfassung generieren",
+            "useExp": "Aufzählungspunkte verwenden"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rolle",
                 "placeholder": "Geben Sie Ihre Rolle für Vorschläge zu Fähigkeiten ein"
             },
-            "generate": "Zusammenfassung generieren"
+            "generate": "Zusammenfassung generieren",
+            "useSkills": "Fähigkeiten verwenden"
         }
     },
     "Languages": {

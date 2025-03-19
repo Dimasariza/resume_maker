@@ -6,9 +6,10 @@ import { VscArrowSwap } from "react-icons/vsc";
 import { FaMinus } from "react-icons/fa6";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createSwapy, utils } from "swapy";
-import { addSkill, setSkill, setSkillTitle } from "@/lib/features/skills";
+import { addSkill, removeSkill, setSkill, setSkillTitle } from "@/lib/features/skills";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslations } from "next-intl";
+import ModalSkills from "../AIModal/modalSkills";
 
 export default function Skills() {
     const t = useTranslations('Skills');
@@ -22,6 +23,15 @@ export default function Skills() {
 
     const swapyRef = useRef(null)
     const containerRef = useRef(null)
+
+    const handleDeleteSkill = (e, id) => {
+        e.preventDefault()
+        const c = confirm("Are you sure to delete?")
+
+        if(c) {
+            dispatch(removeSkill(id))
+        }
+    }
 
     useEffect(() => {
         utils.dynamicSwapy(swapyRef.current, listOfSkills, 'id', slotItemMap, setSlotItemMap)
@@ -47,7 +57,8 @@ export default function Skills() {
             className={`justify-center relative rounded-md ${viewButton.assitant && "outline-gray-300 outline-1 outline-dashed"}`} 
             onMouseEnter={()=>setViewButton(prev => ({...prev, assitant: true}))} 
             onMouseLeave={()=>setViewButton(prev => ({...prev, assitant: false}))}
-        >         
+        >   
+            <ModalSkills />      
             {
                 viewButton.assitant && 
                 <label htmlFor="skills_modal" className="btn absolute right-2 -top-2 btn-xs rounded-full">
@@ -64,33 +75,29 @@ export default function Skills() {
                 autoComplete="off"
             />
 
-            <div className="flex w-full flex-wrap gap-3">
+            <div className="flex w-full flex-wrap gap-1">
                 {
                     slottedItems.map(({ slotId, itemId, item }, index) => (
                         <div key={index} data-swapy-slot={slotId}>
                             <div 
                                 className="relative w-min" 
-                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: item.id}))} 
+                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: item?.id}))} 
                                 onMouseLeave={()=>setViewButton(prev => ({...prev, skill: false}))}
                                 data-swapy-item={itemId} key={itemId}
                             >
                                 {
-                                    viewButton.skill === item.id &&
+                                    viewButton.skill === item?.id &&
                                     <div className="absolute right-2 -top-2 flex gap-1">
-                                        {
-                                            listOfSkills.length > 1 &&
-                                            <>
-                                                <button 
-                                                    className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip={t("remove")} 
-                                                ><FaMinus /></button>
-                                                <button 
-                                                    className="btn btn-xs btn-circle tooltip" 
-                                                    data-tip={t("reorder")}
-                                                    data-swapy-handle
-                                                ><VscArrowSwap /></button>
-                                            </>
-                                        }
+                                        <button 
+                                            className={`btn btn-xs btn-circle tooltip ${listOfSkills.length == 1 && "hidden"}`} 
+                                            data-tip={t("remove")} 
+                                            onClick={(e)=>handleDeleteSkill(e, item.id)}
+                                        ><FaMinus /></button>
+                                        <button 
+                                            className={`btn btn-xs btn-circle tooltip ${listOfSkills.length == 1 && "hidden"}`} 
+                                            data-tip={t("reorder")}
+                                            data-swapy-handle
+                                        ><VscArrowSwap /></button>
                                         <button 
                                             className="btn btn-xs btn-circle tooltip" 
                                             data-tip={t("add")} 
@@ -102,8 +109,8 @@ export default function Skills() {
                                 <input 
                                     type="text" 
                                     placeholder={t("placeholder")} 
-                                    value={item.title} 
-                                    onChange={(e)=>dispatch(setSkill({index: item.id, value: e.target.value}))} 
+                                    value={item?.title} 
+                                    onChange={(e)=>dispatch(setSkill({index: item?.id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0" 
                                     autoComplete="off"
                                 />

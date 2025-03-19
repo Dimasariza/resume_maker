@@ -95,7 +95,8 @@
                 "title": "Instructies (optioneel)",
                 "placeholder": "Voer specifieke details in die je wilt opnemen (bijvoorbeeld kernvaardigheden, persoonlijke eigenschappen, branchefocus)"
             },
-            "generate": "Samenvatting genereren"
+            "generate": "Samenvatting genereren",
+            "useSummary": "Samenvatting gebruiken"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rol",
                 "placeholder": "Voer je rol in voor suggesties van kernpunten"
             },
-            "generate": "Samenvatting genereren"
+            "generate": "Samenvatting genereren",
+            "useExp": "Gebruik opsommingstekens"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rol",
                 "placeholder": "Voer je rol in voor suggesties van vaardigheden"
             },
-            "generate": "Samenvatting genereren"
+            "generate": "Samenvatting genereren",
+            "useSkills": "Vaardigheden gebruiken"
         }
     },
     "Languages": {

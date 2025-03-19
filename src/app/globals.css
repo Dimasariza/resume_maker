@@ -74,6 +74,8 @@
   font-family: var(--font-inter);
 }
 
+@layer base { img { display: initial;} }
+
 /* 
 
 @media (prefers-color-scheme: dark) {

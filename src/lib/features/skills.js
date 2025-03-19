@@ -6,9 +6,7 @@ import { reconstructData } from "../helper";
 const initialState = {
   title: '',
   listOfSkills: [
-    { id: '0', title: '' },
-    // { id: '1', title: '2' },
-    // { id: '2', title: '3' },
+    { id: '0000', title: '' },
   ]
 };
 
@@ -23,14 +21,18 @@ export const skills = createSlice({
         state.listOfSkills = reconstructData(state.listOfSkills, action, "title") 
     },
     addSkill(state, action) {
-        state.listOfSkills = [...state.listOfSkills, {title: '', id: state.listOfSkills.length.toString()}]
+        state.listOfSkills = [...state.listOfSkills, {title: '', id: Date.now().toString(36) + Math.random().toString(36).substring(2, 6)}]
     },
-    removeSkill() {
-
+    addMultiSkills(state, action) {
+      const filter = state.listOfSkills.filter(({title}) => title.length > 0) || []
+      state.listOfSkills = [...filter, ...action.payload]
+    },
+    removeSkill(state, action) {
+      state.listOfSkills = state.listOfSkills.filter(({id}) => action.payload != id)
     }
   }
 });
 
-export const { setSkillTitle, setSkill, addSkill } = skills.actions;
+export const { setSkillTitle, setSkill, addSkill, addMultiSkills, removeSkill } = skills.actions;
 
 export default skills.reducer;

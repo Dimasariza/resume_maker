@@ -7,6 +7,7 @@ const initialState = {
   title: '',
   listOfExperiences: [
     { 
+        id: '0000',
         employeer: '',
         position: '',
         fromUntil: '',
@@ -31,15 +32,16 @@ export const experience = createSlice({
     setExpFromUntil(state, action) {
         state.listOfExperiences = reconstructData(state.listOfExperiences, action, "fromUntil") 
     },
-    setDescription(state, action) {
+    setExpDescription(state, action) {
         state.listOfExperiences = reconstructData(state.listOfExperiences, action, "description") 
     },
     addExperience(state, action) {
-        state.listOfExperiences = [...state.listOfExperiences, initialState.listOfExperiences[0]]
+        const newExperience = {...initialState.listOfExperiences[0], id: Date.now().toString(36) + Math.random().toString(36).substring(2, 6)}
+        state.listOfExperiences = [...state.listOfExperiences, newExperience]
     },
   }
 });
 
-export const { setExpTitle, setEmployeer, setPosition, setExpFromUntil, setDescription, addExperience } = experience.actions;
+export const { setExpTitle, setEmployeer, setPosition, setExpFromUntil, setExpDescription, addExperience } = experience.actions;
 
 export default experience.reducer;

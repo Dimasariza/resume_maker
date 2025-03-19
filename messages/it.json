@@ -95,7 +95,8 @@
                 "title": "Istruzioni (opzionale)",
                 "placeholder": "Inserisci eventuali dettagli specifici che desideri includere (ad es. competenze chiave, tratti personali, settore di interesse)"
             },
-            "generate": "Genera Riepilogo"
+            "generate": "Genera Riepilogo",
+            "useSummary": "Usa Riepilogo"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Ruolo",
                 "placeholder": "Inserisci il tuo ruolo per suggerimenti sui punti elenco"
             },
-            "generate": "Genera Riepilogo"
+            "generate": "Genera Riepilogo",
+            "useExp": "Usa Punti Elenco"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Ruolo",
                 "placeholder": "Inserisci il tuo ruolo per suggerimenti sulle competenze"
             },
-            "generate": "Genera Riepilogo"
+            "generate": "Genera Riepilogo",
+            "useSkills": "Usa Competenze"
         }
     },
     "Languages": {

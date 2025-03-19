@@ -95,7 +95,8 @@
                 "title": "Instructions (optional)",
                 "placeholder": "Enter any spesific details you want to include (e.g. key skills, personal traits, industry focus)"
             },
-            "generate": "Generate Summary"
+            "generate": "Generate Summary",
+            "useSummary": "Use Summary"
         }
     },
     "PersonalDetails": {
@@ -113,7 +114,7 @@
         "employeer": "Employeer",
         "position": "POSITION",
         "fromUntil": "From - Until",
-        "desc": "Enter your work experience descrip tion",
+        "desc": "Enter your work experience description",
         "add": "Add",
         "remove": "Remove",
         "reorder": "Reorder",
@@ -125,7 +126,8 @@
                 "title": "Role",
                 "placeholder": "Enter your role for bullet points suggestions"
             },
-            "generate": "Generate Summary"
+            "generate": "Generate Summary",
+            "useExp": "Use Bullet Points"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Role",
                 "placeholder": "Enter your role for skill suggestions"
             },
-            "generate": "Generate Summary"
+            "generate": "Generate Summary",
+            "useSkills": "Use Skills"
         }
     },
     "Languages": {

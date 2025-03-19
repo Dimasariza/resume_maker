@@ -95,7 +95,8 @@
                 "title": "Instruksi (opsional)",
                 "placeholder": "Masukkan detail spesifik yang ingin Anda sertakan (misalnya keterampilan utama, sifat pribadi, fokus industri)"
             },
-            "generate": "Buat Ringkasan"
+            "generate": "Buat Ringkasan",
+            "useSummary": "Gunakan Ringkasan"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Peran",
                 "placeholder": "Masukkan peran Anda untuk saran poin-poin"
             },
-            "generate": "Buat Ringkasan"
+            "generate": "Buat Ringkasan",
+            "useExp": "Gunakan Poin-Poin"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Peran",
                 "placeholder": "Masukkan peran Anda untuk saran keterampilan"
             },
-            "generate": "Buat Ringkasan"
+            "generate": "Buat Ringkasan",
+            "useSkills": "Gunakan Keterampilan"
         }
     },
     "Languages": {

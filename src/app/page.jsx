@@ -1,9 +1,6 @@
 'use client'
 
 import { NavBar, Content } from "@/components";
-import ModalExperience from "@/components/AIModal/modalExperience";
-import ModalSkills from "@/components/AIModal/modalSkills";
-import ModalSummary from "@/components/AIModal/modalSummary";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
@@ -35,9 +32,6 @@ export default function Home() {
       ${ hexcode == "#000000" ? "bg-[#313131]" : "bg-primary"}` }
     >
       <NavBar />
-      <ModalSummary />
-      <ModalExperience />
-      <ModalSkills />
       <Content />
     </div>
   )

@@ -95,7 +95,8 @@
                 "title": "Instrukcje (opcjonalne)",
                 "placeholder": "Wprowadź szczegóły, które chcesz uwzględnić (np. kluczowe umiejętności, cechy osobiste, branża)"
             },
-            "generate": "Generuj podsumowanie"
+            "generate": "Generuj podsumowanie",
+            "useSummary": "Użyj podsumowania"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rola",
                 "placeholder": "Wprowadź swoją rolę dla sugestii punktów"
             },
-            "generate": "Generuj podsumowanie"
+            "generate": "Generuj podsumowanie",
+            "useExp": "Użyj punktów wypunktowania"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rola",
                 "placeholder": "Wprowadź swoją rolę dla sugestii umiejętności"
             },
-            "generate": "Generuj podsumowanie"
+            "generate": "Generuj podsumowanie",
+            "useSkills": "Użyj umiejętności"
         }
     },
     "Languages": {

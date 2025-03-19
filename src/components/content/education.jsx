@@ -39,33 +39,28 @@ export default function Education({reorderComponent, fitDegree = false}) {
             />
 
             {
-                listOfEducations.map(({school, degree, fromUntil}, index) => (
-                    <div data-swapy-slot={index} key={index}>
+                listOfEducations.map(({school, degree, fromUntil, id}) => (
+                    <div data-swapy-slot={id} key={id}>
                         <div 
                             className={`grid grid-cols-[8%_25%_67%] justify-center relative rounded-md 
-                                ${viewButton === index && "outline-gray-300 outline-1 outline-dashed"}`
+                                ${viewButton === id && "outline-gray-300 outline-1 outline-dashed"}`
                             } 
-                            onMouseEnter={()=>setViewButton(index)} 
+                            onMouseEnter={()=>setViewButton(id)} 
                             onMouseLeave={()=>setViewButton(false)}
-                            data-swapy-item={index}
+                            data-swapy-item={id}
                         >
                             {
-                                viewButton === index &&
+                                viewButton === id &&
                                 <div className="absolute right-2 -top-2 flex gap-1">
-                                    {
-                                        listOfEducations.length > 1 &&
-                                        <>
-                                            <button 
-                                                className="btn btn-xs btn-circle tooltip" 
-                                                data-tip={t("remove")}
-                                            ><FaMinus /></button>
-                                            <button 
-                                                className="btn btn-xs btn-circle tooltip" 
-                                                data-tip={t("reorder")} 
-                                                data-swapy-handle
-                                            ><FaArrowsAltV /></button>
-                                        </>
-                                    }
+                                    <button 
+                                        className={`btn btn-xs btn-circle tooltip ${listOfEducations.length == 1 && "hidden"}`}  
+                                        data-tip={t("remove")}
+                                    ><FaMinus /></button>
+                                    <button 
+                                        className={`btn btn-xs btn-circle tooltip ${listOfEducations.length == 1 && "hidden"}`}  
+                                        data-tip={t("reorder")} 
+                                        data-swapy-handle
+                                    ><FaArrowsAltV /></button>
                                     <button 
                                         onClick={()=>dispatch(addEducation())}
                                         className="btn btn-xs btn-circle tooltip" 
@@ -80,7 +75,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         type="text" 
                                         placeholder={t("school")} 
                                         value={school} 
-                                        onChange={(e)=>dispatch(setSchool({index, value: e.target.value}))} 
+                                        onChange={(e)=>dispatch(setSchool({index: id, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold col-span-2 text-primary" 
                                         autoComplete="off"
                                     />,
@@ -88,10 +83,10 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         type="text" 
                                         placeholder={t("degree")} 
                                         value={degree} 
-                                        onChange={(e)=>dispatch(setDegree({index, value: e.target.value}))} 
+                                        onChange={(e)=>dispatch(setDegree({index: id, value: e.target.value}))} 
                                         className={
-                                            `hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold 
-                                            ${fitDegree && "field-sizing-content"}`
+                                            `hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 font-bold
+                                            ${fitDegree ? "field-sizing-content" : "w-full"}`
                                         } 
                                         autoComplete="off"
                                     />,
@@ -99,7 +94,7 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                         type="text" 
                                         placeholder={t("fromUntil")} 
                                         value={fromUntil} 
-                                        onChange={(e)=>dispatch(setEduFromUntil({index, value: e.target.value}))} 
+                                        onChange={(e)=>dispatch(setEduFromUntil({index: id, value: e.target.value}))} 
                                         className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content" 
                                         autoComplete="off"
                                     />

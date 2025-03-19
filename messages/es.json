@@ -95,7 +95,8 @@
                 "title": "Instrucciones (opcional)",
                 "placeholder": "Introduce cualquier detalle específico que quieras incluir (por ejemplo, habilidades clave, rasgos personales, enfoque de la industria)"
             },
-            "generate": "Generar resumen"
+            "generate": "Generar resumen",
+            "useSummary": "Usar resumen"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rol",
                 "placeholder": "Introduce tu rol para sugerencias de puntos clave"
             },
-            "generate": "Generar resumen"
+            "generate": "Generar resumen",
+            "useExp": "Usar puntos clave"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rol",
                 "placeholder": "Introduce tu rol para sugerencias de habilidades"
             },
-            "generate": "Generar resumen"
+            "generate": "Generar resumen",
+            "useSkills": "Usar habilidades"
         }
     },
     "Languages": {

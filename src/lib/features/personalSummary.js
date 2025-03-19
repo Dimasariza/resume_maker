@@ -14,12 +14,12 @@ export const personalSummary = createSlice({
     setSummaryTitle(state, action) {
       state.title = action.payload;    
     },
-    setDescription(state, action) {
+    setSelfDescription(state, action) {
       state.description = action.payload;
     }
   }
 });
 
-export const { setSummaryTitle, setDescription } = personalSummary.actions;
+export const { setSummaryTitle, setSelfDescription } = personalSummary.actions;
 
 export default personalSummary.reducer;

@@ -95,7 +95,8 @@
                 "title": "Instruktioner (valgfrit)",
                 "placeholder": "Indtast specifikke detaljer, du vil inkludere (f.eks. nøglekompetencer, personlige egenskaber, branchefokus)"
             },
-            "generate": "Generér Resumé"
+            "generate": "Generér Resumé",
+            "useSummary": "Brug Resumé"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rolle",
                 "placeholder": "Indtast din rolle for forslag til punktbeskrivelser"
             },
-            "generate": "Generér Resumé"
+            "generate": "Generér Resumé",
+            "useExp": "Brug Punktbeskrivelser"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rolle",
                 "placeholder": "Indtast din rolle for forslag til kompetencer"
             },
-            "generate": "Generér Resumé"
+            "generate": "Generér Resumé",
+            "useSkills": "Brug Kompetencer"
         }
     },
     "Languages": {

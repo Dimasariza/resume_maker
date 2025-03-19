@@ -95,7 +95,8 @@
                 "title": "Instruções (opcional)",
                 "placeholder": "Insira quaisquer detalhes específicos que deseja incluir (ex.: habilidades-chave, características pessoais, foco na indústria)"
             },
-            "generate": "Gerar Resumo"
+            "generate": "Gerar Resumo",
+            "useSummary": "Usar Resumo"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Função",
                 "placeholder": "Insira sua função para sugestões de tópicos"
             },
-            "generate": "Gerar Resumo"
+            "generate": "Gerar Resumo",
+            "useExp": "Usar Pontos de Destaque"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Função",
                 "placeholder": "Insira sua função para sugestões de habilidades"
             },
-            "generate": "Gerar Resumo"
+            "generate": "Gerar Resumo",
+            "useSkills": "Usar Habilidades"
         }
     },
     "Languages": {

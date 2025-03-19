@@ -95,7 +95,8 @@
                 "title": "Instructions (facultatif)",
                 "placeholder": "Entrez les détails spécifiques que vous souhaitez inclure (par exemple, compétences clés, traits personnels, secteur d'activité)"
             },
-            "generate": "Générer un résumé"
+            "generate": "Générer un résumé",
+            "useSummary": "Utiliser le résumé"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Rôle",
                 "placeholder": "Entrez votre rôle pour des suggestions de points clés"
             },
-            "generate": "Générer un résumé"
+            "generate": "Générer un résumé",
+            "useExp": "Use Bullet Points"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Rôle",
                 "placeholder": "Entrez votre rôle pour des suggestions de compétences"
             },
-            "generate": "Générer un résumé"
+            "generate": "Générer un résumé",
+            "useSkills": "Utiliser les compétences"
         }
     },
     "Languages": {

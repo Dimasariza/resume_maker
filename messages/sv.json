@@ -95,7 +95,8 @@
                 "title": "Instruktioner (valfritt)",
                 "placeholder": "Ange specifika detaljer du vill inkludera (t.ex. nyckelfärdigheter, personliga egenskaper, branschfokus)"
             },
-            "generate": "Generera sammanfattning"
+            "generate": "Generera sammanfattning",
+            "useSummary": "Använd sammanfattning"
         }
     },
     "PersonalDetails": {
@@ -125,7 +126,8 @@
                 "title": "Roll",
                 "placeholder": "Ange din roll för förslag på nyckelpunkter"
             },
-            "generate": "Generera sammanfattning"
+            "generate": "Generera sammanfattning",
+            "useExp": "Använd punktlistor"
         }
     },
     "Educations": {
@@ -151,7 +153,8 @@
                 "title": "Roll",
                 "placeholder": "Ange din roll för förslag på färdigheter"
             },
-            "generate": "Generera sammanfattning"
+            "generate": "Generera sammanfattning",
+            "useSkills": "Använd färdigheter"
         }
     },
     "Languages": {
