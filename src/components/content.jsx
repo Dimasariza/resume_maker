@@ -2,8 +2,7 @@ import SplitLayout from "@components/Layout/splitlayout";
 import ClassicLayout from "@components/Layout/classiclayout";
 import HybridLayout from "@components/Layout/hybridlayout";
 import { useSelector } from "react-redux";
-import { act, useRef } from "react";
-import html2canvas from "html2canvas-pro";
+import { useRef } from "react";
 import jsPDF from "jspdf";
 import { toPng } from "html-to-image";
 
