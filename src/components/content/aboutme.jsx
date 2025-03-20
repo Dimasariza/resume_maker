@@ -51,7 +51,7 @@ export default function AboutMe({viewTitle = true}) {
                 value={description} 
                 onChange={(e)=> dispatch(setSelfDescription(e.target.value))} 
                 wrap="soft" 
-                className="p-1 textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none" 
+                className="p-1 textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none w-full" 
             ></textarea>
         </div>
     )
