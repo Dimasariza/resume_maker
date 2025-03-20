@@ -21,8 +21,6 @@ export function NavBar(params) {
         { name: t("section.title"), icon: '', subMenu: NavBarSections },
     ]
 
-    const [loading, setLoading] = useState(false);
-
     return (
         <header className="nunito flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 sm:py-0 dark:bg-neutral-900">
             <nav className="w-full mx-auto px-4 md:px-6 lg:px-8 flex justify-between navbar bg-base-100 shadow-sm">
@@ -53,17 +51,9 @@ export function NavBar(params) {
                         <div className="badge badge-info text-white">{t("import.badge")}<PiStarFourFill/></div>
                     </button>
                     <label htmlFor="download_content" className="btn  btn-warning">
-                        {
-                            loading
-                            ? <span className="loading loading-spinner loading-xs"></span>
-                            : <BsDownload /> 
-                        }
-                        {t("download.title")}
+                        <BsDownload /> {t("download.title")}
                     </label>
                 </div>
-
-                <input type="checkbox" id="set_loading" className="invisible" onChange={()=>setLoading(prev => !prev)} />
-
             </nav>
         </header>
     )
