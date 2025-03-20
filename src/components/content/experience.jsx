@@ -124,7 +124,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                         value={description} 
                                         onChange={(e)=>dispatch(setExpDescription({index: id, value: e.target.value}))} 
                                         wrap="soft" 
-                                        className="p-1 textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none w-full" 
+                                        className="p-1 text-base textarea min-h-min hover:bg-gray-200 focus:bg-gray-300 focus:outline-0 field-sizing-content textarea-ghost resize-none w-full" 
                                     ></textarea>
                                 )
                             }

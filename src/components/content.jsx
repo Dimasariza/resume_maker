@@ -12,22 +12,32 @@ export function Content (params) {
     const printRef = useRef(null);
 
     const handleDownloadPDF = async () => {
+        const loading = document.getElementById("set_loading")
+        loading.checked = true
+
         const element = printRef.current
         if(!element) return;
 
-        const image = await toPng(element,{ quality:0.95 });
-        const pdf = new jsPDF({
-            orientation: 'portrait',
-            unit: "px",
-            format: "a4"
-        });
-        
-        const imgProperties = pdf.getImageProperties(image)
-        const pdfWidth = pdf.internal.pageSize.getWidth()
-        const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width
-
-        pdf.addImage(image,'PNG',0,0,pdfWidth,pdfHeight);
-        pdf.save();
+        await toPng(element,{ quality:0.95 })
+        .then((image) => {
+            const pdf = new jsPDF({
+                orientation: 'portrait',
+                unit: "px",
+                format: "a4"
+            });
+            
+            const imgProperties = pdf.getImageProperties(image)
+            const pdfWidth = pdf.internal.pageSize.getWidth()
+            const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width
+    
+            pdf.addImage(image,'PNG',0,0,pdfWidth,pdfHeight);
+            pdf.save();
+    
+            loading.checked = false
+        })
+        .catch((e) => {
+            loading.checked = false
+        })
     }
 
     const getActiveLayout = () => {

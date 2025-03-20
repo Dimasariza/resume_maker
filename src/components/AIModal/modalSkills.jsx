@@ -89,7 +89,7 @@ const ModalSkills = () => {
                     <div className="w-full" key={item}>
                       <span 
                         onClick={()=>onAddSelectedSkills(item)} 
-                        className={`text-xs btn btn-sm opacity-60 tracking-wide text-left ${selectedSkills.includes(item) && "bg-red-500"}`}
+                        className={`text-xs btn btn-sm opacity-60 tracking-wide text-left ${selectedSkills.includes(item) && "bg-green-200"}`}
                       >{item}</span>
                     </div>
                   ))

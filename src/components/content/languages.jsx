@@ -73,18 +73,18 @@ export default function Languages() {
                                             listOfLanguages.length > 1 &&
                                             <>
                                                 <button 
-                                                    className="btn btn-xs btn-circle tooltip" 
+                                                    className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                                     data-tip={t("remove")} 
                                                 ><FaMinus /></button>
                                                 <button 
-                                                    className="btn btn-xs btn-circle tooltip" 
+                                                    className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                                     data-tip={t("reorder")} 
                                                     data-swapy-handle
                                                 ><VscArrowSwap /></button>
                                             </>
                                         }
                                         <button 
-                                            className="btn btn-xs btn-circle tooltip" 
+                                            className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                             data-tip={t("add")}  
                                             onClick={()=>dispatch(addLanguage())}
                                         ><GoPlus /></button>

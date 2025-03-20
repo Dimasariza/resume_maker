@@ -90,7 +90,7 @@ const ModalExperience = ({experienceId}) => {
                   <div className="w-full" key={item}>
                     <span 
                       onClick={()=>onAddSelectedExp(item)} 
-                      className={`text-xs btn btn-sm opacity-60 tracking-wide text-left ${selectedExp.includes(item) && "bg-red-500"}`}
+                      className={`text-xs btn btn-sm opacity-60 tracking-wide text-left ${selectedExp.includes(item) && "bg-green-200"}`}
                     >{item}</span>
                   </div>
                 ))
