@@ -18,7 +18,7 @@ export default function AboutMe({viewTitle = true}) {
 
     return (
         <div 
-            className={`text-text-color-primary justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
+            className={`justify-center relative rounded-md ${viewButton && "outline-gray-300 outline-1 outline-dashed"}`} 
             onMouseEnter={()=>setViewButton(true)} 
             onMouseLeave={()=>setViewButton(false)}
         >
@@ -27,7 +27,7 @@ export default function AboutMe({viewTitle = true}) {
                 viewButton && 
                 <label 
                     htmlFor="about_me_modal" 
-                    className="btn absolute right-2 -top-2 btn-xs rounded-full"
+                    className="btn absolute right-2 -top-2 btn-xs rounded-full btn-dash btn-primary"
                 >
                     <PiStarFourDuotone />{t("aiAssistant.title")}
                 </label>

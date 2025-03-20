@@ -69,21 +69,21 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                             {
                                 viewButton === id &&
                                 <div className="absolute right-2 -top-2 flex gap-1">
-                                    <label htmlFor={"experience_modal" + id} className="btn btn-xs rounded-full">
+                                    <label htmlFor={"experience_modal" + id} className="btn btn-xs rounded-full btn-dash btn-primary">
                                         <PiStarFourDuotone />{t("aiAssistant.title")}
                                     </label>
                                     <button 
-                                        className={`btn btn-xs btn-circle tooltip ${listOfExperiences.length == 1 && "hidden"}`}
+                                        className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfExperiences.length == 1 && "hidden"}`}
                                         data-tip={t("remove")}
                                     ><FaMinus /></button>
                                     <button 
-                                        className={`btn btn-xs btn-circle tooltip ${listOfExperiences.length == 1 && "hidden"}`} 
+                                        className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfExperiences.length == 1 && "hidden"}`} 
                                         data-tip={t("reorder")}
                                         data-swapy-handle
                                     ><FaArrowsAltV /></button>
                                     <button  
                                         onClick={()=>dispatch(addExperience())}
-                                        className="btn btn-xs btn-circle tooltip" 
+                                        className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                         data-tip={t("add")}
                                     ><GoPlus /></button>
                                 </div> 

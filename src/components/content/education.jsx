@@ -66,17 +66,17 @@ export default function Education({reorderComponent, fitDegree = false}) {
                                 viewButton === id &&
                                 <div className="absolute right-2 -top-2 flex gap-1">
                                     <button 
-                                        className={`btn btn-xs btn-circle tooltip ${listOfEducations.length == 1 && "hidden"}`}  
+                                        className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfEducations.length == 1 && "hidden"}`}  
                                         data-tip={t("remove")}
                                     ><FaMinus /></button>
                                     <button 
-                                        className={`btn btn-xs btn-circle tooltip ${listOfEducations.length == 1 && "hidden"}`}  
+                                        className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfEducations.length == 1 && "hidden"}`}  
                                         data-tip={t("reorder")} 
                                         data-swapy-handle
                                     ><FaArrowsAltV /></button>
                                     <button 
                                         onClick={()=>dispatch(addEducation())}
-                                        className="btn btn-xs btn-circle tooltip" 
+                                        className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                         data-tip={t("add")}
                                     ><GoPlus /></button>
                                 </div> 

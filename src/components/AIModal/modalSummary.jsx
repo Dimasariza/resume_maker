@@ -124,7 +124,7 @@ const ModalSummary = () => {
             </div>
 
             <button 
-              className={`btn w-full mt-2 bg-primary`} 
+              className={`btn w-full mt-2 bg-primary text-white`} 
               disabled={!value.role.length} 
               type="button"
               onClick={generateSummary}

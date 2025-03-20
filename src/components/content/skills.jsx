@@ -16,6 +16,7 @@ export default function Skills() {
     
     const [viewButton, setViewButton] = useState({assitant: false, skill: false});
     const { title, listOfSkills } = useSelector((state) => state.Skills);
+    console.log(listOfSkills)
     const dispatch = useDispatch();
 
     const handleDeleteSkill = (e, id) => {
@@ -61,7 +62,7 @@ export default function Skills() {
             <ModalSkills />      
             {
                 viewButton.assitant && 
-                <label htmlFor="skills_modal" className="btn absolute right-2 -top-2 btn-xs rounded-full">
+                <label htmlFor="skills_modal" className="btn absolute right-2 -top-2 btn-xs rounded-full btn-dash btn-primary">
                     <PiStarFourDuotone />{t("aiAssistant.title")}
                 </label>
             } 
@@ -77,30 +78,30 @@ export default function Skills() {
 
             <div className="flex w-full flex-wrap gap-1">
                 {
-                    slottedItems.map(({ slotId, itemId, item : {id, title} }) => (
+                    slottedItems.map(({ slotId, itemId, item }) => (
                         <div key={slotId} data-swapy-slot={slotId}>
                             <div 
                                 className="relative w-min" 
-                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: id}))} 
+                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: item?.id}))} 
                                 onMouseLeave={()=>setViewButton(prev => ({...prev, skill: false}))}
                                 data-swapy-item={itemId} 
                                 key={itemId}
                             >
                                 {
-                                    viewButton.skill === id &&
+                                    viewButton.skill === item?.id &&
                                     <div className="absolute right-2 -top-2 flex gap-1">
                                         <button 
-                                            className={`btn btn-xs btn-circle tooltip ${listOfSkills.length == 1 && "hidden"}`} 
+                                            className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfSkills.length == 1 && "hidden"}`} 
                                             data-tip={t("remove")} 
-                                            onClick={(e)=>handleDeleteSkill(e, item.id)}
+                                            onClick={(e)=>handleDeleteSkill(e, item?.id)}
                                         ><FaMinus /></button>
                                         <button 
-                                            className={`btn btn-xs btn-circle tooltip ${listOfSkills.length == 1 && "hidden"}`} 
+                                            className={`btn btn-xs btn-circle tooltip btn-dash btn-primary ${listOfSkills.length == 1 && "hidden"}`} 
                                             data-tip={t("reorder")}
                                             data-swapy-handle
                                         ><VscArrowSwap /></button>
                                         <button 
-                                            className="btn btn-xs btn-circle tooltip" 
+                                            className="btn btn-xs btn-circle tooltip btn-dash btn-primary" 
                                             data-tip={t("add")} 
                                             onClick={()=>dispatch(addSkill())}
                                         ><GoPlus /></button>
@@ -110,8 +111,8 @@ export default function Skills() {
                                 <input 
                                     type="text" 
                                     placeholder={t("placeholder")} 
-                                    value={title} 
-                                    onChange={(e)=>dispatch(setSkill({index: id, value: e.target.value}))} 
+                                    value={item?.title} 
+                                    onChange={(e)=>dispatch(setSkill({index: item?.id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0" 
                                     autoComplete="off"
                                 />

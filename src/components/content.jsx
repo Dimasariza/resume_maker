@@ -44,7 +44,7 @@ export function Content (params) {
     }
 
     return (
-        <section className="flex h-full min-h-screen bg-title w-4xl mt-5">
+        <section className="flex h-full min-h-screen bg-title w-[1000px] mt-5">
             <input type="checkbox" id="download_content" className="invisible" onChange={()=>handleDownloadPDF()} />
             <div ref={printRef} className="text-black w-full p-20 bg-white">
                 { getActiveLayout() }
