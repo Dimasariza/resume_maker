@@ -7,7 +7,7 @@ const initialState = {
   title: '',
   listOfEducations: [
     { 
-      id: '0000',
+      id: 'edu0000',
       school: '',
       degree: '',
       fromUntil: '',

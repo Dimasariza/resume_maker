@@ -2,11 +2,12 @@ import { PiStarFourDuotone } from "react-icons/pi";
 import { GoPlus } from "react-icons/go";
 import { FaMinus } from "react-icons/fa6";
 import { FaArrowsAltV } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setEmployeer, setExpFromUntil, setPosition, setExpTitle, addExperience, setExpDescription } from "@/lib/features/experience";
 import { useTranslations } from "next-intl";
 import ModalExperience from "../AIModal/modalExperience";
+import { createSwapy, utils } from "swapy";
 
 export default function Experience({reorderComponent, fitPosition = false}) {
     const t = useTranslations('Experiences');
@@ -16,8 +17,32 @@ export default function Experience({reorderComponent, fitPosition = false}) {
     const { title, listOfExperiences } = useSelector((state) => state.Experience);
     const dispatch = useDispatch();
 
+    const [slotItemMap, setSlotItemMap] = useState(utils.initSlotItemMap(listOfExperiences, 'id'))
+    const slottedItems = useMemo(() => utils.toSlottedItems(listOfExperiences, 'id', slotItemMap), [listOfExperiences, slotItemMap])
+
+    const swapyRef = useRef(null)
+    const containerRef = useRef(null)
+
+    useEffect(() => {
+        utils.dynamicSwapy(swapyRef.current, listOfExperiences, 'id', slotItemMap, setSlotItemMap)
+    }, [listOfExperiences])
+
+    useEffect(() => {
+        swapyRef.current = createSwapy(containerRef.current, {
+            manualSwap: true,
+        })
+
+        swapyRef.current.onSwap((event) => {
+            setSlotItemMap(event.newSlotItemMap.asArray)
+        })
+
+        return () => {
+            swapyRef.current?.destroy()
+        }
+    }, [])
+
     return (
-        <>         
+        <div ref={containerRef}>         
             <input 
                 type="text" 
                 placeholder={t("title")}
@@ -28,10 +53,8 @@ export default function Experience({reorderComponent, fitPosition = false}) {
             />
 
             {
-                listOfExperiences.map(({employeer, position, fromUntil, description, id}) => (
-                    <div data-swapy-slot={id} key={id}>
-                        <ModalExperience experienceId={id}/>
-                        
+                slottedItems.map(({slotId, itemId, item: {employeer, position, fromUntil, description, id}}) => (
+                    <div data-swapy-slot={slotId} key={slotId}>
                         <div 
                             className={`
                                 grid grid-cols-[8%_25%_67%] justify-center relative rounded-md 
@@ -39,7 +62,10 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                             } 
                             onMouseEnter={()=>setViewButton(id)} 
                             onMouseLeave={()=>setViewButton(false)}
+                            data-swapy-item={itemId}
+                            key={itemId}
                         >
+                            <ModalExperience experienceId={id}/>
                             {
                                 viewButton === id &&
                                 <div className="absolute right-2 -top-2 flex gap-1">
@@ -53,6 +79,7 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                     <button 
                                         className={`btn btn-xs btn-circle tooltip ${listOfExperiences.length == 1 && "hidden"}`} 
                                         data-tip={t("reorder")}
+                                        data-swapy-handle
                                     ><FaArrowsAltV /></button>
                                     <button  
                                         onClick={()=>dispatch(addExperience())}
@@ -101,11 +128,10 @@ export default function Experience({reorderComponent, fitPosition = false}) {
                                     ></textarea>
                                 )
                             }
-
                         </div>
                     </div>
                 ))
             }
-        </>
+        </div>
     )
 }

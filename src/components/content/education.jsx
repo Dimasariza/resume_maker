@@ -1,8 +1,8 @@
 import { GoPlus } from "react-icons/go";
 import { FaArrowsAltV } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
-import { useEffect, useRef, useState } from "react";
-import { createSwapy } from "swapy";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { createSwapy, utils } from "swapy";
 import { setDegree, setEduFromUntil, setSchool, setEduTitle, addEducation } from "@/lib/features/education";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslations } from "next-intl";
@@ -15,13 +15,25 @@ export default function Education({reorderComponent, fitDegree = false}) {
     const { title, listOfEducations } = useSelector((state) => state.Educations);
     const dispatch = useDispatch();
 
+    const [slotItemMap, setSlotItemMap] = useState(utils.initSlotItemMap(listOfEducations, 'id'))
+    const slottedItems = useMemo(() => utils.toSlottedItems(listOfEducations, 'id', slotItemMap), [listOfEducations, slotItemMap])
+
     const swapyRef = useRef(null)
     const containerRef = useRef(null)
-    
+
     useEffect(() => {
-        if (containerRef.current) {
-            swapyRef.current = createSwapy(containerRef.current, {})
-        }
+        utils.dynamicSwapy(swapyRef.current, listOfEducations, 'id', slotItemMap, setSlotItemMap)
+    }, [listOfEducations])
+
+    useEffect(() => {
+        swapyRef.current = createSwapy(containerRef.current, {
+            manualSwap: true,
+        })
+
+        swapyRef.current.onSwap((event) => {
+            setSlotItemMap(event.newSlotItemMap.asArray)
+        })
+
         return () => {
             swapyRef.current?.destroy()
         }
@@ -39,15 +51,16 @@ export default function Education({reorderComponent, fitDegree = false}) {
             />
 
             {
-                listOfEducations.map(({school, degree, fromUntil, id}) => (
-                    <div data-swapy-slot={id} key={id}>
+                slottedItems.map(({slotId, itemId, item: {school, degree, fromUntil, id}}) => (
+                    <div data-swapy-slot={slotId} key={slotId}>
                         <div 
                             className={`grid grid-cols-[8%_25%_67%] justify-center relative rounded-md 
                                 ${viewButton === id && "outline-gray-300 outline-1 outline-dashed"}`
                             } 
                             onMouseEnter={()=>setViewButton(id)} 
                             onMouseLeave={()=>setViewButton(false)}
-                            data-swapy-item={id}
+                            data-swapy-item={itemId}
+                            key={itemId}
                         >
                             {
                                 viewButton === id &&

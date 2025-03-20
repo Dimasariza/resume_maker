@@ -18,12 +18,6 @@ export default function Skills() {
     const { title, listOfSkills } = useSelector((state) => state.Skills);
     const dispatch = useDispatch();
 
-    const [slotItemMap, setSlotItemMap] = useState(utils.initSlotItemMap(listOfSkills, 'id'))
-    const slottedItems = useMemo(() => utils.toSlottedItems(listOfSkills, 'id', slotItemMap), [listOfSkills, slotItemMap])
-
-    const swapyRef = useRef(null)
-    const containerRef = useRef(null)
-
     const handleDeleteSkill = (e, id) => {
         e.preventDefault()
         const c = confirm("Are you sure to delete?")
@@ -32,6 +26,12 @@ export default function Skills() {
             dispatch(removeSkill(id))
         }
     }
+
+    const [slotItemMap, setSlotItemMap] = useState(utils.initSlotItemMap(listOfSkills, 'id'))
+    const slottedItems = useMemo(() => utils.toSlottedItems(listOfSkills, 'id', slotItemMap), [listOfSkills, slotItemMap])
+
+    const swapyRef = useRef(null)
+    const containerRef = useRef(null)
 
     useEffect(() => {
         utils.dynamicSwapy(swapyRef.current, listOfSkills, 'id', slotItemMap, setSlotItemMap)
@@ -77,16 +77,17 @@ export default function Skills() {
 
             <div className="flex w-full flex-wrap gap-1">
                 {
-                    slottedItems.map(({ slotId, itemId, item }, index) => (
-                        <div key={index} data-swapy-slot={slotId}>
+                    slottedItems.map(({ slotId, itemId, item : {id, title} }) => (
+                        <div key={slotId} data-swapy-slot={slotId}>
                             <div 
                                 className="relative w-min" 
-                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: item?.id}))} 
+                                onMouseEnter={()=>setViewButton(prev => ({...prev, skill: id}))} 
                                 onMouseLeave={()=>setViewButton(prev => ({...prev, skill: false}))}
-                                data-swapy-item={itemId} key={itemId}
+                                data-swapy-item={itemId} 
+                                key={itemId}
                             >
                                 {
-                                    viewButton.skill === item?.id &&
+                                    viewButton.skill === id &&
                                     <div className="absolute right-2 -top-2 flex gap-1">
                                         <button 
                                             className={`btn btn-xs btn-circle tooltip ${listOfSkills.length == 1 && "hidden"}`} 
@@ -109,8 +110,8 @@ export default function Skills() {
                                 <input 
                                     type="text" 
                                     placeholder={t("placeholder")} 
-                                    value={item?.title} 
-                                    onChange={(e)=>dispatch(setSkill({index: item?.id, value: e.target.value}))} 
+                                    value={title} 
+                                    onChange={(e)=>dispatch(setSkill({index: id, value: e.target.value}))} 
                                     className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-0" 
                                     autoComplete="off"
                                 />

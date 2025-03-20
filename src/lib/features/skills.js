@@ -6,7 +6,7 @@ import { reconstructData } from "../helper";
 const initialState = {
   title: '',
   listOfSkills: [
-    { id: '0000', title: '' },
+    { id: 'skill0000', title: '' },
   ]
 };
 

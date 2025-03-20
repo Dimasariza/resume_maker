@@ -7,7 +7,7 @@ const initialState = {
   title: '',
   listOfExperiences: [
     { 
-        id: '0000',
+        id: 'exp0000',
         employeer: '',
         position: '',
         fromUntil: '',
