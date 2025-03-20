@@ -43,11 +43,11 @@ export default async function RootLayout({ children }) {
           ${inter}
         `}
           >
-          <NextIntlClientProvider messages={messages}>
             <StoreProvider>
-              {children}
+              <NextIntlClientProvider messages={messages}>
+                  {children}
+              </NextIntlClientProvider>
             </StoreProvider>
-          </NextIntlClientProvider>
         </body>
       </html>
   );
